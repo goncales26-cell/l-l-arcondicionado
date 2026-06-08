@@ -693,7 +693,108 @@
             margin-top: 2px;
         }
 
-        /* ─── DIFERENCIAIS ─── */
+        /* ─── PORTFÓLIO MISTO (vídeos + fotos) ─── */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto auto;
+            gap: 16px;
+        }
+
+        /* Item destaque ocupa 2 colunas e 2 linhas */
+        .portfolio-featured {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--navy);
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+
+        .portfolio-featured {
+            aspect-ratio: unset;
+        }
+
+        .portfolio-item video,
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .portfolio-item:hover video,
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+            filter: brightness(0.55);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13,27,42,0.92) 0%, transparent 55%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+
+        .portfolio-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--cyan);
+            color: var(--navy);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 20px;
+            width: fit-content;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-overlay h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+
+        .portfolio-overlay span {
+            color: var(--silver);
+            font-size: 0.82rem;
+        }
+
+        /* Ícone de play nos vídeos */
+        .portfolio-item:has(video)::after {
+            content: '\F50E';
+            font-family: 'bootstrap-icons';
+            position: absolute;
+            top: 14px; right: 14px;
+            width: 34px; height: 34px;
+            background: rgba(0,180,216,0.85);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            line-height: 34px;
+            text-align: center;
+            opacity: 0.9;
+        }
         .diff-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -974,7 +1075,8 @@
             .contact-wrap { grid-template-columns: 1fr; }
             .map-wrap { height: 300px; }
             .footer-top { grid-template-columns: 1fr 1fr; }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-featured { grid-column: span 2; grid-row: span 1; aspect-ratio: 16/9; }
             .steps-row { grid-template-columns: 1fr; gap: 24px; }
             .steps-row::before { display: none; }
         }
@@ -988,6 +1090,8 @@
             .stat-divider { display: none; }
             .footer-top { grid-template-columns: 1fr; }
             .footer-bottom { flex-direction: column; text-align: center; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .portfolio-featured { grid-column: span 1; aspect-ratio: 16/9; }
         }
     </style>
 </head>
@@ -1148,42 +1252,101 @@
         </div>
     </section>
 
-    <!-- GALERIA -->
+    <!-- GALERIA MISTA: VÍDEOS + FOTOS -->
     <section class="section section-alt" id="resultados">
         <div class="container">
             <div class="reveal">
                 <span class="label-tag">Nossos resultados</span>
                 <h2 class="section-heading">Projetos <span>Entregues</span></h2>
                 <div class="heading-line"></div>
+                <p style="color:var(--gray); margin-bottom: 40px; font-size:1rem;">
+                    Veja na prática a qualidade dos nossos serviços — instalações, higienizações e infraestruturas executadas pela nossa equipe.
+                </p>
             </div>
-            <div class="gallery-grid reveal">
-                <div class="gallery-item">
-                    <img src="./foto01.png" alt="Instalação Padrão" loading="lazy">
-                    <div class="gallery-overlay">
-                        <div><h4>Instalação Padrão</h4><span>Split residencial</span></div>
+
+            <!-- Grade principal: 4 vídeos -->
+            <div class="portfolio-grid reveal">
+                <!-- Vídeo 1 - Destaque maior -->
+                <div class="portfolio-item portfolio-featured">
+                    <video autoplay muted loop playsinline>
+                        <source src="./projeto1.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
+                        <h4>Instalação Residencial</h4>
+                        <span>Split LG · Sorocaba/SP</span>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="./foto02.png" alt="Limpeza Completa" loading="lazy">
-                    <div class="gallery-overlay">
-                        <div><h4>Limpeza Profunda</h4><span>Higienização completa</span></div>
+
+                <!-- Vídeo 2 -->
+                <div class="portfolio-item">
+                    <video autoplay muted loop playsinline>
+                        <source src="./projeto2.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
+                        <h4>Higienização Completa</h4>
+                        <span>Limpeza profunda</span>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="./foto03.png" alt="Infraestrutura" loading="lazy">
-                    <div class="gallery-overlay">
-                        <div><h4>Pré-instalação em Obra</h4><span>Infraestrutura elétrica</span></div>
+
+                <!-- Vídeo 3 -->
+                <div class="portfolio-item">
+                    <video autoplay muted loop playsinline>
+                        <source src="./projeto3.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
+                        <h4>Manutenção Corretiva</h4>
+                        <span>Diagnóstico e reparo</span>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="./foto04.png" alt="Acabamento" loading="lazy">
-                    <div class="gallery-overlay">
-                        <div><h4>Acabamento Impecável</h4><span>Máquina instalada e pronta</span></div>
+
+                <!-- Vídeo 4 -->
+                <div class="portfolio-item">
+                    <video autoplay muted loop playsinline>
+                        <source src="./projeto4.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
+                        <h4>Pré-Instalação em Obra</h4>
+                        <span>Infraestrutura elétrica</span>
+                    </div>
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="portfolio-item">
+                    <img src="./projeto5.png" alt="Condensadoras LG instaladas" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
+                        <h4>Instalação Padrão</h4>
+                        <span>Condensadoras LG Dual Inverter</span>
+                    </div>
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="portfolio-item">
+                    <img src="./projeto6.png" alt="Split premium instalado" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
+                        <h4>Acabamento Impecável</h4>
+                        <span>Split Black instalado</span>
+                    </div>
+                </div>
+
+                <!-- Foto 7 -->
+                <div class="portfolio-item">
+                    <img src="./projeto7.png" alt="Infraestrutura em apartamento" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
+                        <h4>Infraestrutura Vertical</h4>
+                        <span>Instalação em apartamento</span>
                     </div>
                 </div>
             </div>
-            <div style="text-align:center; margin-top: 40px;" class="reveal">
-                <p style="color:var(--gray); margin-bottom: 16px; font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.05em;">
+
+            <div style="text-align:center; margin-top: 50px;" class="reveal">
+                <p style="color:var(--gray); margin-bottom: 16px; font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.05em; text-transform:uppercase;">
                     Acompanhe nossos trabalhos diários no Instagram
                 </p>
                 <a href="https://www.instagram.com/llarcondicionados/" target="_blank" class="btn-secondary" style="border-color:#E1306C; color:#E1306C;">
