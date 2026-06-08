@@ -696,15 +696,8 @@
         /* ─── PORTFÓLIO MISTO (vídeos + fotos) ─── */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto auto auto;
-            gap: 16px;
-        }
-
-        /* Item destaque ocupa 2 colunas e 2 linhas */
-        .portfolio-featured {
-            grid-column: span 2;
-            grid-row: span 2;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
         }
 
         .portfolio-item {
@@ -712,12 +705,8 @@
             border-radius: 10px;
             overflow: hidden;
             background: var(--navy);
-            aspect-ratio: 4/3;
+            aspect-ratio: 9/16; /* vertical — padrão de vídeo de celular */
             cursor: pointer;
-        }
-
-        .portfolio-featured {
-            aspect-ratio: unset;
         }
 
         .portfolio-item video,
@@ -742,7 +731,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 20px;
+            padding: 16px;
             opacity: 0;
             transition: opacity 0.4s ease;
         }
@@ -757,24 +746,24 @@
             color: var(--navy);
             font-family: 'Barlow Condensed', sans-serif;
             font-weight: 700;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
             padding: 3px 10px;
             border-radius: 20px;
             width: fit-content;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .portfolio-overlay h4 {
             color: var(--white);
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 2px;
         }
 
         .portfolio-overlay span {
             color: var(--silver);
-            font-size: 0.82rem;
+            font-size: 0.78rem;
         }
 
         /* Ícone de play nos vídeos */
@@ -782,16 +771,13 @@
             content: '\F50E';
             font-family: 'bootstrap-icons';
             position: absolute;
-            top: 14px; right: 14px;
-            width: 34px; height: 34px;
+            top: 12px; right: 12px;
+            width: 30px; height: 30px;
             background: rgba(0,180,216,0.85);
             color: white;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            line-height: 34px;
+            font-size: 0.85rem;
+            line-height: 30px;
             text-align: center;
             opacity: 0.9;
         }
@@ -1075,8 +1061,7 @@
             .contact-wrap { grid-template-columns: 1fr; }
             .map-wrap { height: 300px; }
             .footer-top { grid-template-columns: 1fr 1fr; }
-            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-            .portfolio-featured { grid-column: span 2; grid-row: span 1; aspect-ratio: 16/9; }
+            .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
             .steps-row { grid-template-columns: 1fr; gap: 24px; }
             .steps-row::before { display: none; }
         }
@@ -1090,8 +1075,7 @@
             .stat-divider { display: none; }
             .footer-top { grid-template-columns: 1fr; }
             .footer-bottom { flex-direction: column; text-align: center; }
-            .portfolio-grid { grid-template-columns: 1fr; }
-            .portfolio-featured { grid-column: span 1; aspect-ratio: 16/9; }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -1266,8 +1250,8 @@
 
             <!-- Grade principal: 4 vídeos -->
             <div class="portfolio-grid reveal">
-                <!-- Vídeo 1 - Destaque maior -->
-                <div class="portfolio-item portfolio-featured">
+                <!-- Vídeo 1 -->
+                <div class="portfolio-item">
                     <video autoplay muted loop playsinline>
                         <source src="./projeto1.mp4" type="video/mp4">
                     </video>
