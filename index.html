@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -22,12 +21,62 @@
     <title>L&L Ar-Condicionado | Assistência Técnica Especializada em Sorocaba</title>
     <meta name="description" content="Especialistas em instalação, manutenção preventiva e corretiva, e higienização de ar condicionado em Sorocaba. Atendimento rápido e equipe técnica qualificada.">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="L&L Ar-Condicionado | Sorocaba">
     <meta property="og:description" content="Instalação, higienização e manutenção de ar condicionado em Sorocaba. Equipe técnica qualificada.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="./lel-arcondicionado.png">
+    <meta property="og:url" content="https://llarcondicionado.com.br">
+    <meta property="og:image" content="https://llarcondicionado.com.br/lel-arcondicionado.png">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://llarcondicionado.com.br/lel-arcondicionado.png">
+
+    <!-- Schema HVACBusiness + FAQ para SEO local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HVACBusiness",
+      "name": "L&L Ar-Condicionado",
+      "description": "Especialistas em instalação, higienização e manutenção de ar condicionado em Sorocaba e região.",
+      "url": "https://llarcondicionado.com.br",
+      "telephone": "+5515998000463",
+      "email": "llarcondicionados@hotmail.com",
+      "areaServed": ["Sorocaba", "Votorantim", "Araçoiaba da Serra", "Iperó", "Itu", "Boituva", "Porto Feliz", "Salto de Pirapora"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Alcides Soares, 129",
+        "addressLocality": "Sorocaba",
+        "addressRegion": "SP",
+        "postalCode": "18074-295",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "13"
+      },
+      "sameAs": ["https://www.instagram.com/llarcondicionados/"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Quanto tempo demora uma instalação padrão?","acceptedAnswer":{"@type":"Answer","text":"Uma instalação padrão de split residencial leva em média 2 a 4 horas, dependendo da complexidade da infraestrutura."}},
+        {"@type":"Question","name":"Vocês atendem em Votorantim e região?","acceptedAnswer":{"@type":"Answer","text":"Sim! Atendemos Sorocaba, Votorantim e toda a região metropolitana, incluindo Araçoiaba da Serra, Iperó, Itu, Boituva e Porto Feliz."}},
+        {"@type":"Question","name":"Com que frequência devo fazer a higienização?","acceptedAnswer":{"@type":"Answer","text":"Recomendamos a higienização a cada 6 meses para uso residencial e a cada 3 meses para ambientes comerciais ou com uso intenso."}},
+        {"@type":"Question","name":"Vocês dão garantia nos serviços?","acceptedAnswer":{"@type":"Answer","text":"Sim, todos os nossos serviços possuem garantia. Trabalhamos com transparência e responsabilidade em cada atendimento."}}
+      ]
+    }
+    </script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -35,63 +84,28 @@
 
     <style>
         :root {
-            --navy:    #0D1B2A;
-            --blue:    #1565C0;
-            --cyan:    #00B4D8;
-            --silver:  #C8D6E5;
-            --white:   #FFFFFF;
-            --gray:    #8B9AB0;
-            --bg:      #F0F4F8;
+            --navy:   #0D1B2A;
+            --blue:   #1565C0;
+            --cyan:   #00B4D8;
+            --silver: #C8D6E5;
+            --white:  #FFFFFF;
+            --gray:   #8B9AB0;
+            --bg:     #F0F4F8;
         }
 
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
-
-        body {
-            background: var(--bg);
-            color: var(--navy);
-            font-family: 'DM Sans', sans-serif;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 800;
-            line-height: 1.1;
-            text-transform: uppercase;
-            letter-spacing: 0.02em;
-        }
-
+        body { background: var(--bg); color: var(--navy); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.02em; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
         /* ─── HEADER ─── */
-        header {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 1000;
-            padding: 0;
-            transition: all 0.4s ease;
-        }
-
-        header.scrolled {
-            background: rgba(13, 27, 42, 0.97);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
-        }
-
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 24px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: all 0.4s ease; }
+        header.scrolled { background: rgba(13,27,42,0.97); backdrop-filter: blur(12px); box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
 
         .logo img {
-            height: 90px;
-            width: 90px;
+            height: 90px; width: 90px;
             object-fit: cover;
             border-radius: 50%;
             border: 2px solid rgba(0,180,216,0.5);
@@ -99,599 +113,94 @@
             background: var(--navy);
             transition: box-shadow 0.3s, transform 0.3s;
         }
+        .logo img:hover { box-shadow: 0 0 30px rgba(0,180,216,0.5), 0 4px 20px rgba(0,0,0,0.4); transform: scale(1.05); }
 
-        .logo img:hover {
-            box-shadow: 0 0 30px rgba(0,180,216,0.5), 0 4px 20px rgba(0,0,0,0.4);
-            transform: scale(1.05);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: rgba(255,255,255,0.85);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 600;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            text-decoration: none;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px; left: 0;
-            width: 0; height: 2px;
-            background: var(--cyan);
-            transition: width 0.3s;
-        }
-
+        .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        .nav-links a { color: rgba(255,255,255,0.85); font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; transition: color 0.3s; position: relative; }
+        .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--cyan); transition: width 0.3s; }
         .nav-links a:hover { color: var(--cyan); }
         .nav-links a:hover::after { width: 100%; }
 
-        .btn-nav {
-            background: var(--cyan);
-            color: var(--navy) !important;
-            padding: 10px 24px;
-            border-radius: 4px;
-            font-weight: 700 !important;
-            font-size: 0.9rem !important;
-            transition: all 0.3s !important;
-        }
-
-        .btn-nav:hover {
-            background: var(--white) !important;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,180,216,0.4);
-        }
-
+        .btn-nav { background: var(--cyan); color: var(--navy) !important; padding: 10px 24px; border-radius: 4px; font-weight: 700 !important; font-size: 0.9rem !important; transition: all 0.3s !important; }
+        .btn-nav:hover { background: var(--white) !important; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,180,216,0.4); }
         .btn-nav::after { display: none !important; }
-
         .mobile-btn { display: none; cursor: pointer; color: white; font-size: 1.8rem; }
 
-        /* ─── HERO COM VÍDEO ─── */
-        .hero {
-            position: relative;
-            height: 100vh;
-            min-height: 650px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
+        /* ─── HERO ─── */
+        .hero { position: relative; height: 100vh; min-height: 650px; display: flex; align-items: center; overflow: hidden; }
+        .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+        .hero-bg-fallback { position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(21,101,192,0.35) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(0,180,216,0.2) 0%, transparent 50%), var(--navy); z-index: 0; }
+        .hero-grid { position: absolute; inset: 0; z-index: 1; background-image: linear-gradient(rgba(0,180,216,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,180,216,0.07) 1px, transparent 1px); background-size: 60px 60px; animation: gridMove 20s linear infinite; }
+        @keyframes gridMove { 0% { background-position: 0 0; } 100% { background-position: 60px 60px; } }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,27,42,0.88) 0%, rgba(13,27,42,0.65) 50%, rgba(21,101,192,0.4) 100%); z-index: 2; }
+        .hero-particles { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+        .particle { position: absolute; width: 4px; height: 4px; background: var(--cyan); border-radius: 50%; opacity: 0; animation: floatUp var(--dur) ease-in var(--delay) infinite; }
+        @keyframes floatUp { 0% { opacity: 0; transform: translateY(0) scale(0); } 20% { opacity: 0.8; transform: translateY(-20px) scale(1); } 100% { opacity: 0; transform: translateY(-120px) scale(0.5); } }
 
-        .hero-video {
-            position: absolute;
-            inset: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
-            z-index: 0;
-        }
+        .hero-content { position: relative; z-index: 4; width: 100%; text-align: center; padding-top: 80px; }
+        .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; background: rgba(0,180,216,0.15); border: 1px solid rgba(0,180,216,0.3); color: var(--cyan); padding: 8px 20px; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; animation: fadeDown 0.8s ease both; }
+        .hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 20px; height: 1px; background: var(--cyan); }
+        .hero h1 { color: var(--white); font-size: clamp(3rem, 8vw, 6.5rem); margin-bottom: 12px; animation: fadeDown 0.8s ease 0.1s both; }
+        .hero h1 .highlight { color: var(--cyan); position: relative; display: inline-block; }
+        .hero h1 .highlight::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--cyan), transparent); border-radius: 2px; }
+        .hero-city { font-size: clamp(1.5rem, 4vw, 3rem); color: var(--silver); font-family: 'Barlow Condensed', sans-serif; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 30px; animation: fadeDown 0.8s ease 0.2s both; }
+        .hero-desc { color: rgba(200,214,229,0.85); font-size: 1.1rem; max-width: 580px; margin: 0 auto 40px; line-height: 1.7; animation: fadeDown 0.8s ease 0.3s both; }
+        .hero-ctas { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; animation: fadeDown 0.8s ease 0.4s both; }
 
-        /* Fallback quando não há vídeo — grade animada */
-        .hero-bg-fallback {
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse at 20% 50%, rgba(21,101,192,0.35) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 30%, rgba(0,180,216,0.2) 0%, transparent 50%),
-                var(--navy);
-            z-index: 0;
-        }
+        .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--cyan); color: var(--navy); padding: 16px 36px; border-radius: 4px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; box-shadow: 0 0 30px rgba(0,180,216,0.3); }
+        .btn-primary:hover { background: var(--white); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,180,216,0.4); }
+        .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--white); padding: 16px 36px; border-radius: 4px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s; }
+        .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-3px); }
 
-        /* Grade tecnológica animada */
-        .hero-grid {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            background-image:
-                linear-gradient(rgba(0,180,216,0.07) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0,180,216,0.07) 1px, transparent 1px);
-            background-size: 60px 60px;
-            animation: gridMove 20s linear infinite;
-        }
-
-        @keyframes gridMove {
-            0% { background-position: 0 0; }
-            100% { background-position: 60px 60px; }
-        }
-
-        /* Overlay escuro sobre o vídeo */
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                135deg,
-                rgba(13,27,42,0.88) 0%,
-                rgba(13,27,42,0.65) 50%,
-                rgba(21,101,192,0.4) 100%
-            );
-            z-index: 2;
-        }
-
-        /* Partículas decorativas */
-        .hero-particles {
-            position: absolute;
-            inset: 0;
-            z-index: 3;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px; height: 4px;
-            background: var(--cyan);
-            border-radius: 50%;
-            opacity: 0;
-            animation: floatUp var(--dur) ease-in var(--delay) infinite;
-        }
-
-        @keyframes floatUp {
-            0% { opacity: 0; transform: translateY(0) scale(0); }
-            20% { opacity: 0.8; transform: translateY(-20px) scale(1); }
-            100% { opacity: 0; transform: translateY(-120px) scale(0.5); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 4;
-            width: 100%;
-            text-align: center;
-            padding-top: 80px;
-        }
-
-        .hero-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(0,180,216,0.15);
-            border: 1px solid rgba(0,180,216,0.3);
-            color: var(--cyan);
-            padding: 8px 20px;
-            border-radius: 2px;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-            animation: fadeDown 0.8s ease both;
-        }
-
-        .hero-eyebrow::before,
-        .hero-eyebrow::after {
-            content: '';
-            width: 20px; height: 1px;
-            background: var(--cyan);
-        }
-
-        .hero h1 {
-            color: var(--white);
-            font-size: clamp(3rem, 8vw, 6.5rem);
-            margin-bottom: 12px;
-            animation: fadeDown 0.8s ease 0.1s both;
-        }
-
-        .hero h1 .highlight {
-            color: var(--cyan);
-            position: relative;
-            display: inline-block;
-        }
-
-        .hero h1 .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 4px; left: 0; right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--cyan), transparent);
-            border-radius: 2px;
-        }
-
-        .hero-city {
-            font-size: clamp(1.5rem, 4vw, 3rem);
-            color: var(--silver);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 400;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            animation: fadeDown 0.8s ease 0.2s both;
-        }
-
-        .hero-desc {
-            color: rgba(200,214,229,0.85);
-            font-size: 1.1rem;
-            max-width: 580px;
-            margin: 0 auto 40px;
-            line-height: 1.7;
-            animation: fadeDown 0.8s ease 0.3s both;
-        }
-
-        .hero-ctas {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-            animation: fadeDown 0.8s ease 0.4s both;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--cyan);
-            color: var(--navy);
-            padding: 16px 36px;
-            border-radius: 4px;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-            font-size: 1.05rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: 0 0 30px rgba(0,180,216,0.3);
-        }
-
-        .btn-primary:hover {
-            background: var(--white);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0,180,216,0.4);
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: transparent;
-            color: var(--white);
-            padding: 16px 36px;
-            border-radius: 4px;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-            font-size: 1.05rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            text-decoration: none;
-            border: 2px solid rgba(255,255,255,0.3);
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--cyan);
-            color: var(--cyan);
-            transform: translateY(-3px);
-        }
-
-        /* Scroll indicator */
-        .scroll-hint {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            color: rgba(255,255,255,0.4);
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            animation: bounce 2s ease infinite;
-        }
-
+        .scroll-hint { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 4; display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.4); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; animation: bounce 2s ease infinite; }
         .scroll-hint i { font-size: 1.2rem; }
+        @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(8px); }
-        }
-
-        /* Stats bar logo abaixo do hero */
-        .stats-bar {
-            background: var(--navy);
-            border-bottom: 3px solid var(--cyan);
-        }
-
-        .stats-inner {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 28px 24px;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-            color: var(--white);
-        }
-
-        .stat-num {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 900;
-            font-size: 2.2rem;
-            color: var(--cyan);
-            display: block;
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            color: var(--silver);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-top: 4px;
-            display: block;
-        }
-
-        .stat-divider {
-            width: 1px;
-            height: 50px;
-            background: rgba(255,255,255,0.1);
-        }
+        /* ─── STATS BAR ─── */
+        .stats-bar { background: var(--navy); border-bottom: 3px solid var(--cyan); }
+        .stats-inner { display: flex; justify-content: space-around; align-items: center; padding: 28px 24px; gap: 20px; flex-wrap: wrap; }
+        .stat-item { text-align: center; color: var(--white); }
+        .stat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.2rem; color: var(--cyan); display: block; line-height: 1; }
+        .stat-label { font-size: 0.8rem; color: var(--silver); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; display: block; }
+        .stat-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.1); }
 
         /* ─── SEÇÕES GERAIS ─── */
         .section { padding: 100px 0; }
         .section-alt { background: var(--white); }
-
-        .label-tag {
-            display: inline-block;
-            color: var(--cyan);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        .label-tag::before {
-            content: '— ';
-            color: var(--blue);
-        }
-
-        .section-heading {
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--navy);
-            margin-bottom: 20px;
-        }
-
+        .label-tag { display: inline-block; color: var(--cyan); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+        .label-tag::before { content: '— '; color: var(--blue); }
+        .section-heading { font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); margin-bottom: 20px; }
         .section-heading span { color: var(--cyan); }
-
-        .heading-line {
-            width: 50px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--cyan), var(--blue));
-            border-radius: 2px;
-            margin-bottom: 20px;
-        }
+        .heading-line { width: 50px; height: 4px; background: linear-gradient(90deg, var(--cyan), var(--blue)); border-radius: 2px; margin-bottom: 20px; }
 
         /* ─── SERVIÇOS ─── */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-        }
-
-        .service-card {
-            background: var(--white);
-            border-radius: 8px;
-            padding: 36px 28px;
-            border: 1px solid #E2EAF4;
-            transition: all 0.35s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 4px; height: 0;
-            background: linear-gradient(180deg, var(--cyan), var(--blue));
-            transition: height 0.35s ease;
-            border-radius: 0 0 4px 0;
-        }
-
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+        .service-card { background: var(--white); border-radius: 8px; padding: 36px 28px; border: 1px solid #E2EAF4; transition: all 0.35s ease; position: relative; overflow: hidden; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0; background: linear-gradient(180deg, var(--cyan), var(--blue)); transition: height 0.35s ease; border-radius: 0 0 4px 0; }
         .service-card:hover::before { height: 100%; }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(21,101,192,0.12);
-            border-color: transparent;
-        }
-
-        .service-num {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 900;
-            font-size: 3.5rem;
-            color: rgba(0,180,216,0.1);
-            line-height: 1;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .service-icon-wrap {
-            width: 56px; height: 56px;
-            background: linear-gradient(135deg, var(--blue), var(--cyan));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-size: 1.4rem;
-            color: var(--navy);
-            margin-bottom: 12px;
-        }
-
-        .service-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .service-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--blue);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(21,101,192,0.12); border-color: transparent; }
+        .service-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3.5rem; color: rgba(0,180,216,0.1); line-height: 1; margin-bottom: 16px; display: block; }
+        .service-icon-wrap { width: 56px; height: 56px; background: linear-gradient(135deg, var(--blue), var(--cyan)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 20px; }
+        .service-card h3 { font-size: 1.4rem; color: var(--navy); margin-bottom: 12px; }
+        .service-card p { color: var(--gray); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+        .service-cta { display: inline-flex; align-items: center; gap: 6px; color: var(--blue); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
         .service-cta:hover { color: var(--cyan); gap: 10px; }
 
         /* ─── MARCAS ─── */
-        .brands-section {
-            background: var(--navy);
-            padding: 40px 0;
-            overflow: hidden;
-        }
-
-        .brands-label {
-            text-align: center;
-            color: var(--gray);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 600;
-            font-size: 0.85rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-        }
-
+        .brands-section { background: var(--navy); padding: 40px 0; overflow: hidden; }
+        .brands-label { text-align: center; color: var(--gray); font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px; }
         .brands-track-wrap { overflow: hidden; }
-
-        .brands-track {
-            display: flex;
-            gap: 60px;
-            align-items: center;
-            animation: marquee 18s linear infinite;
-            width: max-content;
-        }
-
-        .brands-track span {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-            font-size: 1.3rem;
-            color: rgba(255,255,255,0.25);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            white-space: nowrap;
-            transition: color 0.3s;
-        }
-
+        .brands-track { display: flex; gap: 60px; align-items: center; animation: marquee 18s linear infinite; width: max-content; }
+        .brands-track span { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.3rem; color: rgba(255,255,255,0.25); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; transition: color 0.3s; }
         .brands-track span:hover { color: var(--cyan); }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
         /* ─── CTA BANNER ─── */
-        .cta-section {
-            background: linear-gradient(135deg, var(--blue) 0%, #0D47A1 100%);
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-
-        .cta-inner {
-            position: relative;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            color: var(--white);
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            margin-bottom: 16px;
-        }
-
-        .cta-section p {
-            color: rgba(255,255,255,0.75);
-            font-size: 1.1rem;
-            max-width: 550px;
-            margin: 0 auto 36px;
-        }
-
-        /* ─── GALERIA ─── */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            aspect-ratio: 4/3;
-            background: var(--navy);
-        }
-
-        .gallery-item img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease, filter 0.5s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-            filter: brightness(0.5);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(13,27,42,0.9) 0%, transparent 60%);
-            display: flex;
-            align-items: flex-end;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .gallery-item:hover .gallery-overlay { opacity: 1; }
-
-        .gallery-overlay h4 {
-            color: var(--white);
-            font-size: 1.1rem;
-        }
-
-        .gallery-overlay span {
-            color: var(--cyan);
-            font-size: 0.8rem;
-            display: block;
-            margin-top: 2px;
-        }
+        .cta-section { background: linear-gradient(135deg, var(--blue) 0%, #0D47A1 100%); padding: 80px 0; position: relative; overflow: hidden; }
+        .cta-section::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 40px 40px; }
+        .cta-inner { position: relative; text-align: center; }
+        .cta-section h2 { color: var(--white); font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 16px; }
+        .cta-section p { color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 550px; margin: 0 auto 36px; }
 
         /* ─── PORTFÓLIO MISTO (vídeos + fotos) ─── */
         .portfolio-grid {
@@ -705,24 +214,20 @@
             border-radius: 10px;
             overflow: hidden;
             background: var(--navy);
-            aspect-ratio: 9/16; /* vertical — padrão de vídeo de celular */
+            aspect-ratio: 9/16;
             cursor: pointer;
         }
 
         .portfolio-item video,
         .portfolio-item img {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             object-fit: cover;
             display: block;
             transition: transform 0.5s ease, filter 0.5s ease;
         }
 
         .portfolio-item:hover video,
-        .portfolio-item:hover img {
-            transform: scale(1.05);
-            filter: brightness(0.55);
-        }
+        .portfolio-item:hover img { transform: scale(1.05); filter: brightness(0.55); }
 
         .portfolio-overlay {
             position: absolute;
@@ -755,18 +260,9 @@
             margin-bottom: 6px;
         }
 
-        .portfolio-overlay h4 {
-            color: var(--white);
-            font-size: 1rem;
-            margin-bottom: 2px;
-        }
+        .portfolio-overlay h4 { color: var(--white); font-size: 1rem; margin-bottom: 2px; }
+        .portfolio-overlay span { color: var(--silver); font-size: 0.78rem; }
 
-        .portfolio-overlay span {
-            color: var(--silver);
-            font-size: 0.78rem;
-        }
-
-        /* Ícone de play nos vídeos */
         .portfolio-item:has(video)::after {
             content: '\F50E';
             font-family: 'bootstrap-icons';
@@ -781,280 +277,272 @@
             text-align: center;
             opacity: 0.9;
         }
-        .diff-grid {
+
+        /* ─── DEPOIMENTOS ─── */
+        .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
 
-        .diff-card {
-            text-align: center;
-            padding: 40px 24px;
+        .review-card {
             background: var(--white);
-            border-radius: 8px;
-            border-bottom: 4px solid transparent;
+            border-radius: 12px;
+            padding: 28px;
+            border: 1px solid #E2EAF4;
             transition: all 0.3s;
+            position: relative;
         }
 
-        .diff-card:hover {
-            border-color: var(--cyan);
+        .review-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 20px 40px rgba(21,101,192,0.1);
         }
 
-        .diff-icon {
-            width: 72px; height: 72px;
-            background: linear-gradient(135deg, rgba(21,101,192,0.1), rgba(0,180,216,0.15));
+        .review-stars {
+            color: #F59E0B;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            display: flex;
+            gap: 2px;
+        }
+
+        .review-text {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .review-avatar {
+            width: 42px; height: 42px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
-            color: var(--blue);
-            transition: all 0.3s;
-        }
-
-        .diff-card:hover .diff-icon {
-            background: linear-gradient(135deg, var(--blue), var(--cyan));
-            color: white;
-        }
-
-        .diff-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
-        .diff-card p { color: var(--gray); font-size: 0.9rem; line-height: 1.6; font-family: 'Barlow Condensed', sans-serif; font-weight: 400; }
-
-        /* ─── COMO FUNCIONA ─── */
-        .steps-row {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            position: relative;
-        }
-
-        .steps-row::before {
-            content: '';
-            position: absolute;
-            top: 40px; left: 16.66%; right: 16.66%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--cyan), var(--blue), var(--cyan));
-            z-index: 0;
-        }
-
-        .step {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .step-num {
-            width: 80px; height: 80px;
-            background: linear-gradient(135deg, var(--blue), var(--cyan));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
             font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 900;
-            font-size: 2rem;
-            color: white;
-            box-shadow: 0 8px 24px rgba(21,101,192,0.3);
-        }
-
-        .step h3 { font-size: 1.3rem; margin-bottom: 10px; }
-        .step p { color: var(--gray); font-size: 0.9rem; }
-
-        /* ─── CONTATO ─── */
-        .contact-section {
-            background: var(--navy);
-            padding: 100px 0;
-        }
-
-        .contact-wrap {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .contact-wrap .label-tag { color: var(--cyan); }
-        .contact-wrap .section-heading { color: var(--white); }
-        .contact-wrap .section-heading span { color: var(--cyan); }
-
-        .contact-items { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            border-left: 3px solid var(--cyan);
-            transition: background 0.3s;
-        }
-
-        .contact-item:hover { background: rgba(0,180,216,0.08); }
-
-        .contact-item-icon {
-            width: 48px; height: 48px;
-            background: linear-gradient(135deg, var(--blue), var(--cyan));
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
+            font-weight: 800;
+            font-size: 1.1rem;
             color: white;
             flex-shrink: 0;
         }
 
-        .contact-item strong {
+        .review-author strong {
             display: block;
-            color: var(--cyan);
+            color: var(--navy);
+            font-size: 0.95rem;
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 2px;
         }
 
-        .contact-item span { color: var(--silver); font-size: 0.95rem; }
-
-        .map-wrap {
-            border-radius: 12px;
-            overflow: hidden;
-            height: 420px;
-            border: 2px solid rgba(0,180,216,0.2);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-        }
-
-        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
-
-        /* ─── FOOTER ─── */
-        footer {
-            background: #060D14;
-            padding: 60px 0 30px;
-            border-top: 1px solid rgba(255,255,255,0.06);
-        }
-
-        .footer-top {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-brand p {
+        .review-author span {
             color: var(--gray);
-            font-size: 0.9rem;
-            line-height: 1.7;
-            margin: 16px 0 24px;
-            max-width: 280px;
+            font-size: 0.8rem;
         }
 
-        .footer-social { display: flex; gap: 12px; }
-
-        .footer-social a {
-            width: 38px; height: 38px;
-            background: rgba(255,255,255,0.06);
-            border-radius: 6px;
-            display: flex;
+        .google-badge {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            color: var(--gray);
-            font-size: 1rem;
-            text-decoration: none;
-            transition: all 0.3s;
+            gap: 10px;
+            background: var(--white);
+            border: 1px solid #E2EAF4;
+            border-radius: 50px;
+            padding: 10px 24px;
+            margin: 0 auto 40px;
         }
 
-        .footer-social a:hover {
-            background: var(--cyan);
+        .google-badge .g-logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 1.4rem;
+            background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .google-badge .g-rating {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            font-size: 1.1rem;
             color: var(--navy);
         }
 
-        .footer-col h4 {
-            color: var(--white);
-            font-size: 0.85rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+        .google-badge .g-stars { color: #F59E0B; font-size: 0.85rem; }
+        .google-badge .g-count { color: var(--gray); font-size: 0.8rem; }
+
+        /* ─── FAQ ─── */
+        .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            border: 1px solid #E2EAF4;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
         }
 
-        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .faq-item:hover { box-shadow: 0 8px 24px rgba(21,101,192,0.08); }
 
-        .footer-links a {
-            color: var(--gray);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .footer-links a:hover { color: var(--cyan); padding-left: 6px; }
-        .footer-links a i { font-size: 0.75rem; }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.06);
-            padding-top: 24px;
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
+            cursor: pointer;
+            text-align: left;
+            gap: 16px;
         }
 
-        .footer-bottom p { color: var(--gray); font-size: 0.85rem; }
-        .footer-bottom strong { color: var(--cyan); }
+        .faq-question span {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
 
-        /* ─── WHATSAPP FLOAT ─── */
-        .wa-float {
-            position: fixed;
-            bottom: 30px; right: 30px;
-            width: 65px; height: 65px;
-            background: #25D366;
+        .faq-icon {
+            width: 28px; height: 28px;
+            background: rgba(0,180,216,0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 2.2rem;
-            text-decoration: none;
-            box-shadow: 0 8px 25px rgba(37,211,102,0.4);
-            z-index: 999;
+            color: var(--cyan);
+            flex-shrink: 0;
             transition: all 0.3s;
-            animation: waPulse 2.5s ease infinite;
         }
 
-        .wa-float:hover {
-            transform: scale(1.1) translateY(-4px);
-            box-shadow: 0 16px 35px rgba(37,211,102,0.5);
+        .faq-item.open .faq-icon {
+            background: var(--cyan);
+            color: white;
+            transform: rotate(45deg);
         }
 
-        @keyframes waPulse {
-            0%, 100% { box-shadow: 0 8px 25px rgba(37,211,102,0.4); }
-            50% { box-shadow: 0 8px 25px rgba(37,211,102,0.4), 0 0 0 12px rgba(37,211,102,0.12); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
         }
+
+        .faq-answer p {
+            padding: 0 24px 20px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            border-top: 1px solid #F0F4F8;
+            padding-top: 16px;
+        }
+
+        .faq-item.open .faq-answer { max-height: 200px; }
+
+        /* ─── REGIÕES ─── */
+        .regions-section {
+            background: var(--navy);
+            padding: 80px 0;
+        }
+
+        .regions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .region-item {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(0,180,216,0.15);
+            border-radius: 8px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .region-item:hover {
+            background: rgba(0,180,216,0.1);
+            border-color: var(--cyan);
+            transform: translateY(-3px);
+        }
+
+        .region-item i { color: var(--cyan); font-size: 0.9rem; flex-shrink: 0; }
+
+        .region-item span {
+            color: var(--silver);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* ─── DIFERENCIAIS ─── */
+        .diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+        .diff-card { text-align: center; padding: 40px 24px; background: var(--white); border-radius: 8px; border-bottom: 4px solid transparent; transition: all 0.3s; }
+        .diff-card:hover { border-color: var(--cyan); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+        .diff-icon { width: 72px; height: 72px; background: linear-gradient(135deg, rgba(21,101,192,0.1), rgba(0,180,216,0.15)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.8rem; color: var(--blue); transition: all 0.3s; }
+        .diff-card:hover .diff-icon { background: linear-gradient(135deg, var(--blue), var(--cyan)); color: white; }
+        .diff-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .diff-card p { color: var(--gray); font-size: 0.9rem; line-height: 1.6; font-family: 'Barlow Condensed', sans-serif; font-weight: 400; }
+
+        /* ─── COMO FUNCIONA ─── */
+        .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; }
+        .steps-row::before { content: ''; position: absolute; top: 40px; left: 16.66%; right: 16.66%; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--blue), var(--cyan)); z-index: 0; }
+        .step { text-align: center; position: relative; z-index: 1; }
+        .step-num { width: 80px; height: 80px; background: linear-gradient(135deg, var(--blue), var(--cyan)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2rem; color: white; box-shadow: 0 8px 24px rgba(21,101,192,0.3); }
+        .step h3 { font-size: 1.3rem; margin-bottom: 10px; }
+        .step p { color: var(--gray); font-size: 0.9rem; }
+
+        /* ─── CONTATO ─── */
+        .contact-section { background: var(--navy); padding: 100px 0; }
+        .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .contact-wrap .label-tag { color: var(--cyan); }
+        .contact-wrap .section-heading { color: var(--white); }
+        .contact-wrap .section-heading span { color: var(--cyan); }
+        .contact-items { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+        .contact-item { display: flex; align-items: center; gap: 20px; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 3px solid var(--cyan); transition: background 0.3s; }
+        .contact-item:hover { background: rgba(0,180,216,0.08); }
+        .contact-item-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--blue), var(--cyan)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: white; flex-shrink: 0; }
+        .contact-item strong { display: block; color: var(--cyan); font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+        .contact-item span { color: var(--silver); font-size: 0.95rem; }
+        .map-wrap { border-radius: 12px; overflow: hidden; height: 420px; border: 2px solid rgba(0,180,216,0.2); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+
+        /* ─── FOOTER ─── */
+        footer { background: #060D14; padding: 60px 0 30px; border-top: 1px solid rgba(255,255,255,0.06); }
+        .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand p { color: var(--gray); font-size: 0.9rem; line-height: 1.7; margin: 16px 0 24px; max-width: 280px; }
+        .footer-social { display: flex; gap: 12px; }
+        .footer-social a { width: 38px; height: 38px; background: rgba(255,255,255,0.06); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 1rem; text-decoration: none; transition: all 0.3s; }
+        .footer-social a:hover { background: var(--cyan); color: var(--navy); }
+        .footer-col h4 { color: var(--white); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-links a { color: var(--gray); text-decoration: none; font-size: 0.9rem; transition: all 0.3s; display: flex; align-items: center; gap: 6px; }
+        .footer-links a:hover { color: var(--cyan); padding-left: 6px; }
+        .footer-links a i { font-size: 0.75rem; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .footer-bottom p { color: var(--gray); font-size: 0.85rem; }
+        .footer-bottom strong { color: var(--cyan); }
+
+        /* ─── WHATSAPP FLOAT ─── */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; width: 65px; height: 65px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.2rem; text-decoration: none; box-shadow: 0 8px 25px rgba(37,211,102,0.4); z-index: 999; transition: all 0.3s; animation: waPulse 2.5s ease infinite; }
+        .wa-float:hover { transform: scale(1.1) translateY(-4px); box-shadow: 0 16px 35px rgba(37,211,102,0.5); }
+        @keyframes waPulse { 0%, 100% { box-shadow: 0 8px 25px rgba(37,211,102,0.4); } 50% { box-shadow: 0 8px 25px rgba(37,211,102,0.4), 0 0 0 12px rgba(37,211,102,0.12); } }
 
         /* ─── ANIMAÇÕES ─── */
-        @keyframes fadeDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
 
         /* ─── RESPONSIVE ─── */
         @media (max-width: 992px) {
@@ -1081,7 +569,6 @@
 </head>
 <body>
 
-    <!-- HEADER -->
     <header id="site-header">
         <div class="nav-inner">
             <a href="#" class="logo"><img src="./lel-arcondicionado.png" alt="L&L Ar-Condicionado"></a>
@@ -1089,36 +576,29 @@
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="#resultados">Projetos</a></li>
+                    <li><a href="#avaliacoes">Avaliações</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li><a href="https://wa.me/5515998000463" class="btn-nav" onclick="registrarConversaoWhats()">Orçamento Grátis</a></li>
+                    <li><a href="https://wa.me/5515998000463" class="btn-nav" onclick="registrarConversaoWhats()">Orçamento Rápido</a></li>
                 </ul>
             </nav>
             <div class="mobile-btn" id="mobile-btn"><i class="bi bi-list"></i></div>
         </div>
     </header>
 
-    <!-- HERO COM VÍDEO -->
     <section class="hero" id="inicio">
-        <!-- Fundo: tente carregar o vídeo, senão usa o fallback visual -->
         <video class="hero-video" autoplay muted loop playsinline poster="./hero_ar.png">
             <source src="./hero_video.mp4" type="video/mp4">
         </video>
         <div class="hero-bg-fallback"></div>
         <div class="hero-grid"></div>
         <div class="hero-overlay"></div>
-
-        <!-- Partículas decorativas -->
         <div class="hero-particles" id="particles"></div>
-
         <div class="hero-content container">
             <div class="hero-eyebrow">Instalação & Manutenção</div>
             <h1>Soluções Completas<br>em <span class="highlight">Ar Condicionado</span></h1>
             <p class="hero-city">Sorocaba · SP</p>
-            <p class="hero-desc">
-                Equipe técnica especializada para garantir o clima perfeito na sua casa ou empresa.
-                Atendimento ágil, transparência total e serviço garantido.
-            </p>
+            <p class="hero-desc">Equipe técnica especializada para garantir o clima perfeito na sua casa ou empresa. Atendimento ágil, transparência total e serviço garantido.</p>
             <div class="hero-ctas">
                 <a href="https://wa.me/5515998000463" class="btn-primary" onclick="registrarConversaoWhats()">
                     <i class="bi bi-whatsapp"></i> Falar com Especialista
@@ -1128,39 +608,24 @@
                 </a>
             </div>
         </div>
-
         <div class="scroll-hint">
             <span>Role para ver</span>
             <i class="bi bi-chevron-down"></i>
         </div>
     </section>
 
-    <!-- STATS BAR -->
     <div class="stats-bar">
         <div class="stats-inner container">
-            <div class="stat-item">
-                <span class="stat-num">500+</span>
-                <span class="stat-label">Clientes Atendidos</span>
-            </div>
+            <div class="stat-item"><span class="stat-num">500+</span><span class="stat-label">Clientes Atendidos</span></div>
             <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-num">8+</span>
-                <span class="stat-label">Anos de Experiência</span>
-            </div>
+            <div class="stat-item"><span class="stat-num">8+</span><span class="stat-label">Anos de Experiência</span></div>
             <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-num">Todas</span>
-                <span class="stat-label">as Marcas</span>
-            </div>
+            <div class="stat-item"><span class="stat-num">Todas</span><span class="stat-label">as Marcas</span></div>
             <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-num">100%</span>
-                <span class="stat-label">Serviço Garantido</span>
-            </div>
+            <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Serviço Garantido</span></div>
         </div>
     </div>
 
-    <!-- SERVIÇOS -->
     <section class="section" id="servicos">
         <div class="container">
             <div class="reveal">
@@ -1174,42 +639,33 @@
                     <div class="service-icon-wrap"><i class="bi bi-wind"></i></div>
                     <h3>Limpeza e Higienização</h3>
                     <p>Remoção de ácaros e bactérias. Ar mais puro e economia na conta de energia garantida.</p>
-                    <a href="https://wa.me/5515998000463?text=Olá,%20gostaria%20de%20orçar%20uma%20LIMPEZA" class="service-cta" target="_blank">
-                        Solicitar <i class="bi bi-arrow-right"></i>
-                    </a>
+                    <a href="https://wa.me/5515998000463?text=Olá,%20gostaria%20de%20orçar%20uma%20LIMPEZA" class="service-cta" target="_blank">Solicitar <i class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="service-card reveal">
                     <span class="service-num">02</span>
                     <div class="service-icon-wrap"><i class="bi bi-tools"></i></div>
                     <h3>Instalação Padrão</h3>
                     <p>Montagem técnica de splits com ferramentas de precisão e acabamento impecável.</p>
-                    <a href="https://wa.me/5515998000463?text=Olá,%20gostaria%20de%20orçar%20uma%20INSTALAÇÃO" class="service-cta" target="_blank">
-                        Solicitar <i class="bi bi-arrow-right"></i>
-                    </a>
+                    <a href="https://wa.me/5515998000463?text=Olá,%20gostaria%20de%20orçar%20uma%20INSTALAÇÃO" class="service-cta" target="_blank">Solicitar <i class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="service-card reveal">
                     <span class="service-num">03</span>
                     <div class="service-icon-wrap"><i class="bi bi-wrench"></i></div>
                     <h3>Manutenção Corretiva</h3>
                     <p>Máquina pingando ou não gela? Diagnosticamos e resolvemos o problema rapidamente.</p>
-                    <a href="https://wa.me/5515998000463?text=Olá,%20preciso%20de%20MANUTENÇÃO" class="service-cta" target="_blank">
-                        Solicitar <i class="bi bi-arrow-right"></i>
-                    </a>
+                    <a href="https://wa.me/5515998000463?text=Olá,%20preciso%20de%20MANUTENÇÃO" class="service-cta" target="_blank">Solicitar <i class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="service-card reveal">
                     <span class="service-num">04</span>
                     <div class="service-icon-wrap"><i class="bi bi-house-gear"></i></div>
                     <h3>Pré-Instalação em Obras</h3>
                     <p>Passagem de infraestrutura completa durante a construção ou reforma do seu imóvel.</p>
-                    <a href="https://wa.me/5515998000463?text=Olá,%20preciso%20de%20INFRAESTRUTURA" class="service-cta" target="_blank">
-                        Solicitar <i class="bi bi-arrow-right"></i>
-                    </a>
+                    <a href="https://wa.me/5515998000463?text=Olá,%20preciso%20de%20INFRAESTRUTURA" class="service-cta" target="_blank">Solicitar <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MARCAS (marquee) -->
     <div class="brands-section">
         <p class="brands-label">Trabalhamos com as melhores marcas</p>
         <div class="brands-track-wrap">
@@ -1217,7 +673,6 @@
                 <span>LG</span><span>Samsung</span><span>Midea</span><span>Fujitsu</span>
                 <span>Daikin</span><span>TCL</span><span>Gree</span><span>Elgin</span>
                 <span>Springer</span><span>Hitachi</span><span>Carrier</span>
-                <!-- Duplicado para loop -->
                 <span>LG</span><span>Samsung</span><span>Midea</span><span>Fujitsu</span>
                 <span>Daikin</span><span>TCL</span><span>Gree</span><span>Elgin</span>
                 <span>Springer</span><span>Hitachi</span><span>Carrier</span>
@@ -1225,7 +680,6 @@
         </div>
     </div>
 
-    <!-- CTA BANNER -->
     <section class="cta-section">
         <div class="container cta-inner reveal">
             <h2>Precisa de um técnico hoje?</h2>
@@ -1236,69 +690,49 @@
         </div>
     </section>
 
-    <!-- GALERIA MISTA: VÍDEOS + FOTOS -->
     <section class="section section-alt" id="resultados">
         <div class="container">
             <div class="reveal">
                 <span class="label-tag">Nossos resultados</span>
                 <h2 class="section-heading">Projetos <span>Entregues</span></h2>
                 <div class="heading-line"></div>
-                <p style="color:var(--gray); margin-bottom: 40px; font-size:1rem;">
+                <p style="color:var(--gray); margin-bottom:40px; font-size:1rem;">
                     Veja na prática a qualidade dos nossos serviços — instalações, higienizações e infraestruturas executadas pela nossa equipe.
                 </p>
             </div>
-
-            <!-- Grade principal: 4 vídeos -->
             <div class="portfolio-grid reveal">
-                <!-- Vídeo 1 -->
                 <div class="portfolio-item">
-                    <video autoplay muted loop playsinline>
-                        <source src="./projeto1.mp4" type="video/mp4">
-                    </video>
+                    <video autoplay muted loop playsinline><source src="./projeto1.mp4" type="video/mp4"></video>
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
                         <h4>Instalação Residencial</h4>
                         <span>Split LG · Sorocaba/SP</span>
                     </div>
                 </div>
-
-                <!-- Vídeo 2 -->
                 <div class="portfolio-item">
-                    <video autoplay muted loop playsinline>
-                        <source src="./projeto2.mp4" type="video/mp4">
-                    </video>
+                    <video autoplay muted loop playsinline><source src="./projeto2.mp4" type="video/mp4"></video>
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
                         <h4>Higienização Completa</h4>
                         <span>Limpeza profunda</span>
                     </div>
                 </div>
-
-                <!-- Vídeo 3 -->
                 <div class="portfolio-item">
-                    <video autoplay muted loop playsinline>
-                        <source src="./projeto3.mp4" type="video/mp4">
-                    </video>
+                    <video autoplay muted loop playsinline><source src="./projeto3.mp4" type="video/mp4"></video>
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
                         <h4>Manutenção Corretiva</h4>
                         <span>Diagnóstico e reparo</span>
                     </div>
                 </div>
-
-                <!-- Vídeo 4 -->
                 <div class="portfolio-item">
-                    <video autoplay muted loop playsinline>
-                        <source src="./projeto4.mp4" type="video/mp4">
-                    </video>
+                    <video autoplay muted loop playsinline><source src="./projeto4.mp4" type="video/mp4"></video>
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
                         <h4>Pré-Instalação em Obra</h4>
                         <span>Infraestrutura elétrica</span>
                     </div>
                 </div>
-
-                <!-- Foto 5 -->
                 <div class="portfolio-item">
                     <img src="./projeto5.png" alt="Condensadoras LG instaladas" loading="lazy">
                     <div class="portfolio-overlay">
@@ -1307,8 +741,6 @@
                         <span>Condensadoras LG Dual Inverter</span>
                     </div>
                 </div>
-
-                <!-- Foto 6 -->
                 <div class="portfolio-item">
                     <img src="./projeto6.png" alt="Split premium instalado" loading="lazy">
                     <div class="portfolio-overlay">
@@ -1317,8 +749,6 @@
                         <span>Split Black instalado</span>
                     </div>
                 </div>
-
-                <!-- Foto 7 -->
                 <div class="portfolio-item">
                     <img src="./projeto7.png" alt="Infraestrutura em apartamento" loading="lazy">
                     <div class="portfolio-overlay">
@@ -1328,9 +758,8 @@
                     </div>
                 </div>
             </div>
-
-            <div style="text-align:center; margin-top: 50px;" class="reveal">
-                <p style="color:var(--gray); margin-bottom: 16px; font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.05em; text-transform:uppercase;">
+            <div style="text-align:center; margin-top:50px;" class="reveal">
+                <p style="color:var(--gray); margin-bottom:16px; font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.05em; text-transform:uppercase;">
                     Acompanhe nossos trabalhos diários no Instagram
                 </p>
                 <a href="https://www.instagram.com/llarcondicionados/" target="_blank" class="btn-secondary" style="border-color:#E1306C; color:#E1306C;">
@@ -1340,7 +769,6 @@
         </div>
     </section>
 
-    <!-- DIFERENCIAIS -->
     <section class="section">
         <div class="container">
             <div class="reveal" style="text-align:center; margin-bottom:60px;">
@@ -1373,7 +801,6 @@
         </div>
     </section>
 
-    <!-- COMO FUNCIONA -->
     <section class="section section-alt">
         <div class="container">
             <div class="reveal" style="text-align:center; margin-bottom:60px;">
@@ -1401,7 +828,174 @@
         </div>
     </section>
 
-    <!-- CONTATO -->
+    <!-- DEPOIMENTOS -->
+    <section class="section section-alt" id="avaliacoes">
+        <div class="container">
+            <div class="reveal" style="text-align:center; margin-bottom:40px;">
+                <span class="label-tag">Confiança</span>
+                <h2 class="section-heading">O que dizem nossos <span>Clientes</span></h2>
+                <div class="heading-line" style="margin:0 auto 24px;"></div>
+                <!-- Badge Google -->
+                <div class="google-badge reveal">
+                    <span class="g-logo">G</span>
+                    <div>
+                        <div class="g-rating">4,9 <span class="g-stars">★★★★★</span></div>
+                        <div class="g-count">Baseado em 13 avaliações no Google</div>
+                    </div>
+                    <a href="https://share.google/PkBxqPMHrRDaCe8Bo" target="_blank"
+                       style="color:var(--blue); font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.85rem; letter-spacing:0.05em; text-decoration:none; text-transform:uppercase;">
+                       Ver avaliações →
+                    </a>
+                </div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card reveal">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Excelente empresa. Instalaram um trabalho impecável e super profissional. Foram os únicos que se dispuseram a buscar a melhor alternativa para instalação do nosso ar, ficaram um excelente trabalho."</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background:linear-gradient(135deg,#1565C0,#00B4D8);">P</div>
+                        <div><strong>Priscila Justo</strong><span>Sorocaba, SP · Local Guide</span></div>
+                    </div>
+                </div>
+                <div class="review-card reveal">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Solicitei a instalação de dois aparelhos Samsung, após várias tentativas dos aparelhos não instalarem, o Luiz e o L realizaram um excelente trabalho, realmente profissional, muito educados e competentes."</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background:linear-gradient(135deg,#7C3AED,#A78BFA);">J</div>
+                        <div><strong>Jamille Nishi</strong><span>Sorocaba, SP</span></div>
+                    </div>
+                </div>
+                <div class="review-card reveal">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Profissional ético e dedicado. Após inúmeras tentativas de solução de vazamento do meu aparelho, foi o único que conseguiu resolver."</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background:linear-gradient(135deg,#059669,#34D399);">G</div>
+                        <div><strong>Geisa Correa</strong><span>Sorocaba, SP</span></div>
+                    </div>
+                </div>
+                <div class="review-card reveal">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Profissionais muito preparados, com grande conhecimento na instalação e reparos de problemas, super recomendo!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background:linear-gradient(135deg,#DC2626,#F87171);">R</div>
+                        <div><strong>Roberto Silva</strong><span>Sorocaba, SP</span></div>
+                    </div>
+                </div>
+                <div class="review-card reveal">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Excelente profissional, me respondeu no whatsapp em poucos minutos. Foi uma chamada de vídeo e me ajudou muito. Super recomendo!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background:linear-gradient(135deg,#D97706,#FCD34D);">F</div>
+                        <div><strong>Felipe Carneiro</strong><span>Sorocaba, SP</span></div>
+                    </div>
+                </div>
+                <div class="review-card reveal">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"A empresa prestou serviços no nosso equipamento de Ar Condicionado. Ficaram excelentes. Empresa muito competente!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar" style="background:linear-gradient(135deg,#0891B2,#67E8F9);">R</div>
+                        <div><strong>Rainer Krause</strong><span>Sorocaba, SP</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="reveal" style="text-align:center; margin-bottom:50px;">
+                <span class="label-tag">Tire suas dúvidas</span>
+                <h2 class="section-heading">Perguntas <span>Frequentes</span></h2>
+                <div class="heading-line" style="margin:0 auto;"></div>
+            </div>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quanto tempo demora uma instalação padrão?</span>
+                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Uma instalação padrão de split residencial leva em média 2 a 4 horas, dependendo da complexidade da infraestrutura e do acesso ao local.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Com que frequência devo higienizar o ar condicionado?</span>
+                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Recomendamos higienização a cada 6 meses para uso residencial e a cada 3 meses para ambientes comerciais ou com uso intenso. Aparelhos sujos consomem até 30% mais energia.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vocês dão garantia nos serviços?</span>
+                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Todos os nossos serviços possuem garantia. Trabalhamos com peças de qualidade e responsabilidade técnica em cada atendimento.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vocês atendem empresas e comércios?</span>
+                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, atendemos residências, comércios, escritórios e indústrias. Temos experiência com instalações de múltiplos aparelhos e sistemas de climatização corporativa.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quais cidades vocês atendem?</span>
+                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Atendemos Sorocaba e toda a região, incluindo Votorantim, Araçoiaba da Serra, Iperó, Itu, Boituva, Porto Feliz e Salto de Pirapora.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vocês trabalham com todas as marcas?</span>
+                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Atendemos todas as marcas do mercado: LG, Samsung, Midea, Daikin, Fujitsu, TCL, Gree, Elgin, Springer, Hitachi, Carrier e muitas outras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGIÕES DE ATENDIMENTO -->
+    <div class="regions-section">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <span class="label-tag" style="color:var(--cyan);">Onde atuamos</span>
+                <h2 class="section-heading" style="color:var(--white);">Regiões de <span>Atendimento</span></h2>
+                <div class="heading-line" style="margin:0 auto;"></div>
+                <p style="color:var(--gray); margin-top:12px; font-size:0.95rem;">
+                    Instalação e manutenção de ar condicionado em Sorocaba e toda a região metropolitana.
+                </p>
+            </div>
+            <div class="regions-grid reveal">
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Sorocaba</span></div>
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Votorantim</span></div>
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Araçoiaba da Serra</span></div>
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Iperó</span></div>
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Itu</span></div>
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Boituva</span></div>
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Porto Feliz</span></div>
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Salto de Pirapora</span></div>
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Cerquilho</span></div>
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Tietê</span></div>
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Tatuí</span></div>
+                <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Mairinque</span></div>
+            </div>
+        </div>
+    </div>
+
     <section class="contact-section" id="contato">
         <div class="container">
             <div class="contact-wrap">
@@ -1412,31 +1006,19 @@
                     <div class="contact-items">
                         <div class="contact-item">
                             <div class="contact-item-icon"><i class="bi bi-whatsapp"></i></div>
-                            <div>
-                                <strong>WhatsApp / Telefone</strong>
-                                <span>(15) 99800-0463 / (15) 99111-3066</span>
-                            </div>
+                            <div><strong>WhatsApp / Telefone</strong><span>(15) 99800-0463 / (15) 99111-3066</span></div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-item-icon"><i class="bi bi-envelope"></i></div>
-                            <div>
-                                <strong>E-mail</strong>
-                                <span>llarcondicionados@hotmail.com</span>
-                            </div>
+                            <div><strong>E-mail</strong><span>llarcondicionados@hotmail.com</span></div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-item-icon"><i class="bi bi-instagram"></i></div>
-                            <div>
-                                <strong>Instagram</strong>
-                                <span>@llarcondicionados</span>
-                            </div>
+                            <div><strong>Instagram</strong><span>@llarcondicionados</span></div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-item-icon"><i class="bi bi-geo-alt"></i></div>
-                            <div>
-                                <strong>Endereço Base</strong>
-                                <span>Rua Alcides Soares, 129 — Jd. Pacaembu, Sorocaba/SP</span>
-                            </div>
+                            <div><strong>Endereço Base</strong><span>Rua Alcides Soares, 129 — Jd. Pacaembu, Sorocaba/SP</span></div>
                         </div>
                     </div>
                 </div>
@@ -1449,7 +1031,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-top">
@@ -1487,26 +1068,22 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
     <a href="https://wa.me/5515998000463?text=Olá!%20Vim%20pelo%20site%20da%20L%26L%20Ar-Condicionado%20e%20gostaria%20de%20agendar%20um%20serviço."
        class="wa-float" target="_blank" onclick="registrarConversaoWhats()">
         <i class="bi bi-whatsapp"></i>
     </a>
 
     <script>
-        // Header scroll
         const header = document.getElementById('site-header');
         window.addEventListener('scroll', () => {
             header.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Mobile menu
         const mobileBtn = document.getElementById('mobile-btn');
         const navLinks  = document.getElementById('nav-links');
         mobileBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
         navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-        // Partículas no hero
         const particlesContainer = document.getElementById('particles');
         for (let i = 0; i < 25; i++) {
             const p = document.createElement('div');
@@ -1522,7 +1099,16 @@
             particlesContainer.appendChild(p);
         }
 
-        // Scroll reveal
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+
         const reveals = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, i) => {
