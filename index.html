@@ -104,8 +104,9 @@
         .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--white); padding: 16px 36px; border-radius: 50px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; text-decoration: none; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s; }
         .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(0,180,216,0.05); }
 
+        /* Correção da Imagem do Hero */
         .hero-overlap { max-width: 900px; margin: -80px auto 0; position: relative; z-index: 10; padding: 0 20px; }
-        .hero-overlap img { width: 100%; border-radius: 16px; box-shadow: 0 25px 50px rgba(0,0,0,0.3); border: 4px solid white; object-fit: cover; height: 400px; }
+        .hero-overlap img { width: 100%; border-radius: 16px; box-shadow: 0 25px 50px rgba(0,0,0,0.3); border: 4px solid white; object-fit: cover; height: auto; max-height: 450px; }
 
         /* ─── STATS & TRUST ─── */
         .stats-bar { background: var(--white); padding: 30px 0; border-bottom: 1px solid #E2EAF4; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
@@ -138,7 +139,7 @@
         .service-cta { display: inline-flex; align-items: center; gap: 8px; color: var(--navy); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; text-decoration: none; transition: 0.3s; }
         .service-cta:hover { color: var(--cyan); gap: 12px; }
 
-        /* ─── DEPOIMENTOS (NOVO) ─── */
+        /* ─── DEPOIMENTOS ─── */
         .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
         .review-card { background: var(--bg); padding: 30px; border-radius: 12px; border-left: 4px solid var(--cyan); }
         .review-stars { color: var(--star); margin-bottom: 15px; font-size: 1.1rem; }
@@ -148,7 +149,7 @@
         .author-info h4 { font-size: 1.1rem; margin: 0; text-transform: none; font-family: 'DM Sans', sans-serif; }
         .author-info span { color: var(--gray); font-size: 0.85rem; }
 
-        /* ─── FAQ (NOVO) ─── */
+        /* ─── FAQ ─── */
         .faq-grid { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 800px; margin: 0 auto; }
         .faq-item { background: var(--bg); border-radius: 8px; overflow: hidden; }
         .faq-question { padding: 20px 24px; cursor: pointer; font-weight: 600; color: var(--navy); display: flex; justify-content: space-between; align-items: center; background: white; border: 1px solid #E2EAF4; border-radius: 8px; }
@@ -157,11 +158,11 @@
         .faq-item.active .faq-answer { padding: 20px 24px; max-height: 200px; border-top: 1px solid #E2EAF4; }
         .faq-item.active .faq-question i { transform: rotate(180deg); color: var(--cyan); }
 
-        /* ─── PORTFÓLIO ─── */
+        /* ─── PORTFÓLIO (CORRIGIDO PARA FOTOS) ─── */
         .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .portfolio-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: var(--navy); }
-        .portfolio-item video, .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-        .portfolio-item:hover video, .portfolio-item:hover img { transform: scale(1.05); filter: brightness(0.6); }
+        .portfolio-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; background: var(--navy); border: 1px solid #E2EAF4; }
+        .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
+        .portfolio-item:hover img { transform: scale(1.05); filter: brightness(0.6); }
         .portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,27,42,0.9) 0%, transparent 60%); display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; opacity: 0; transition: 0.3s; }
         .portfolio-item:hover .portfolio-overlay { opacity: 1; }
         .portfolio-tag { background: var(--cyan); color: var(--white); font-size: 0.75rem; font-weight: bold; padding: 4px 10px; border-radius: 4px; width: fit-content; margin-bottom: 8px; text-transform: uppercase; }
@@ -181,10 +182,11 @@
         .map-wrap { border-radius: 16px; overflow: hidden; height: 400px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
         .map-wrap iframe { width: 100%; height: 100%; border: 0; }
 
-        /* ─── FOOTER ─── */
+        /* ─── FOOTER (CORRIGIDO) ─── */
         footer { background: #0A1118; color: #9CA3AF; padding: 60px 0 30px; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-logo img { height: 60px; filter: brightness(0) invert(1); margin-bottom: 20px; }
+        /* Removido o filter invert para não bugar a logo */
+        .footer-logo img { height: 80px; border-radius: 8px; margin-bottom: 20px; object-fit: contain; }
         .footer-col h4 { color: white; font-size: 1.1rem; margin-bottom: 20px; }
         .footer-links { list-style: none; }
         .footer-links li { margin-bottom: 12px; }
@@ -207,7 +209,7 @@
             .mobile-btn { display: block; }
             .hero { padding: 120px 0 100px; }
             .hero h1 { font-size: 2.5rem; }
-            .hero-overlap img { height: 250px; }
+            .hero-overlap img { height: auto; max-height: 250px; }
             .stats-inner { gap: 30px; }
             .footer-bottom { flex-direction: column; text-align: center; }
         }
@@ -321,30 +323,30 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <video autoplay muted loop playsinline><source src="./projeto1.mp4" type="video/mp4"></video>
+                    <img src="./foto01.png" alt="Instalação de Ar Condicionado" loading="lazy">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">Vídeo</span>
-                        <h4>Instalação Split</h4>
+                        <span class="portfolio-tag">Instalação</span>
+                        <h4>Serviço Concluído</h4>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <video autoplay muted loop playsinline><source src="./projeto2.mp4" type="video/mp4"></video>
+                    <img src="./foto02.png" alt="Manutenção de Ar Condicionado" loading="lazy">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">Vídeo</span>
-                        <h4>Higienização</h4>
+                        <span class="portfolio-tag">Manutenção</span>
+                        <h4>Equipamento Higienizado</h4>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <img src="./foto03.png" alt="Obra e infraestrutura" loading="lazy">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">Foto</span>
+                        <span class="portfolio-tag">Infraestrutura</span>
                         <h4>Infra em Reforma</h4>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <img src="./foto04.png" alt="Condensadora instalada" loading="lazy">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag">Foto</span>
+                        <span class="portfolio-tag">Acabamento</span>
                         <h4>Unidade Externa Segura</h4>
                     </div>
                 </div>
@@ -506,7 +508,8 @@
             <div class="footer-bottom">
                 <div>
                     © 2026 <strong>L&L Ar-Condicionado</strong>. Todos os direitos reservados.<br>
-                    <span style="font-size: 0.75rem; color: var(--gray);">CNPJ: 00.000.000/0001-00</span> </div>
+                    <span style="font-size: 0.75rem; color: var(--gray);">CNPJ: 00.000.000/0001-00</span>
+                </div>
                 <div style="font-size: 0.8rem; text-align: right;">
                     Desenvolvido por <strong style="color: var(--cyan);">65.611.420 FLAVIO GONCALES</strong>
                 </div>
