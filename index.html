@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -19,40 +20,18 @@
     <meta name="referrer" content="no-referrer">
 
     <title>L&L Ar-Condicionado | Assistência Técnica Especializada em Sorocaba</title>
-    <meta name="description" content="Especialistas em instalação, manutenção preventiva e corretiva, e higienização de ar condicionado em Sorocaba, Votorantim e região. Equipe técnica qualificada.">
+    <meta name="description" content="Especialistas em instalação, manutenção preventiva e corretiva, e higienização de ar condicionado em Sorocaba. Atendimento rápido e equipe técnica qualificada.">
 
-    <meta property="og:title" content="L&L Ar-Condicionado | Sorocaba e Região">
-    <meta property="og:description" content="Instalação, higienização e manutenção de ar condicionado. Atendimento rápido e com garantia.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="L&L Ar-Condicionado | Sorocaba">
+    <meta property="og:description" content="Instalação, higienização e manutenção de ar condicionado em Sorocaba. Equipe técnica qualificada.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://llarcondicionados.com.br">
-    <meta property="og:image" content="https://llarcondicionados.com.br/lel-arcondicionado.png">
+    <meta property="og:image" content="./lel-arcondicionado.png">
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./lel-arcondicionado.png">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HVACBusiness",
-      "name": "L&L Ar-Condicionado",
-      "image": "https://llarcondicionados.com.br/lel-arcondicionado.png",
-      "telephone": "+5515998000463",
-      "email": "llarcondicionados@hotmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua Alcides Soares, 129 - Jd. Pacaembu",
-        "addressLocality": "Sorocaba",
-        "addressRegion": "SP",
-        "addressCountry": "BR",
-        "postalCode": "18074-295"
-      },
-      "areaServed": ["Sorocaba", "Votorantim", "Araçoiaba da Serra", "Salto de Pirapora", "Itu", "Boituva", "Iperó"],
-      "url": "https://llarcondicionados.com.br",
-      "priceRange": "$$"
-    }
-    </script>
 
     <style>
         :root {
@@ -63,261 +42,1100 @@
             --white:   #FFFFFF;
             --gray:    #8B9AB0;
             --bg:      #F0F4F8;
-            --star:    #FBBF24;
         }
 
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
         html { scroll-behavior: smooth; }
-        body { background: var(--bg); color: var(--navy); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
-        
-        h1, h2, h3, h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.02em; }
+
+        body {
+            background: var(--bg);
+            color: var(--navy);
+            font-family: 'DM Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 800;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
         /* ─── HEADER ─── */
-        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0; transition: all 0.4s ease; }
-        header.scrolled { background: rgba(13, 27, 42, 0.97); backdrop-filter: blur(12px); box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
-        .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
-        .logo img { height: 90px; width: 90px; object-fit: cover; border-radius: 50%; border: 2px solid rgba(0,180,216,0.5); box-shadow: 0 0 20px rgba(0,180,216,0.25), 0 4px 12px rgba(0,0,0,0.3); background: var(--white); transition: box-shadow 0.3s, transform 0.3s; padding: 5px; }
-        .logo img:hover { box-shadow: 0 0 30px rgba(0,180,216,0.5), 0 4px 20px rgba(0,0,0,0.4); transform: scale(1.05); }
-        
-        .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
-        .nav-links a { color: rgba(255,255,255,0.85); font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; transition: color 0.3s; position: relative; }
-        .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--cyan); transition: width 0.3s; }
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 0;
+            transition: all 0.4s ease;
+        }
+
+        header.scrolled {
+            background: rgba(13, 27, 42, 0.97);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 90px;
+            width: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid rgba(0,180,216,0.5);
+            box-shadow: 0 0 20px rgba(0,180,216,0.25), 0 4px 12px rgba(0,0,0,0.3);
+            background: var(--navy);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .logo img:hover {
+            box-shadow: 0 0 30px rgba(0,180,216,0.5), 0 4px 20px rgba(0,0,0,0.4);
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            text-decoration: none;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--cyan);
+            transition: width 0.3s;
+        }
+
         .nav-links a:hover { color: var(--cyan); }
         .nav-links a:hover::after { width: 100%; }
-        
-        .btn-nav { background: var(--cyan); color: var(--navy) !important; padding: 10px 24px; border-radius: 4px; font-weight: 700 !important; font-size: 0.9rem !important; transition: all 0.3s !important; }
-        .btn-nav:hover { background: var(--white) !important; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,180,216,0.4); }
+
+        .btn-nav {
+            background: var(--cyan);
+            color: var(--navy) !important;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 700 !important;
+            font-size: 0.9rem !important;
+            transition: all 0.3s !important;
+        }
+
+        .btn-nav:hover {
+            background: var(--white) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,180,216,0.4);
+        }
+
         .btn-nav::after { display: none !important; }
+
         .mobile-btn { display: none; cursor: pointer; color: white; font-size: 1.8rem; }
 
-        /* ─── HERO ─── */
-        .hero { position: relative; height: 100vh; min-height: 650px; display: flex; align-items: center; overflow: hidden; }
-        .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
-        .hero-bg-fallback { position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(21,101,192,0.35) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(0,180,216,0.2) 0%, transparent 50%), var(--navy); z-index: 0; }
-        .hero-grid { position: absolute; inset: 0; z-index: 1; background-image: linear-gradient(rgba(0,180,216,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,180,216,0.07) 1px, transparent 1px); background-size: 60px 60px; animation: gridMove 20s linear infinite; }
-        @keyframes gridMove { 0% { background-position: 0 0; } 100% { background-position: 60px 60px; } }
-        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,27,42,0.88) 0%, rgba(13,27,42,0.65) 50%, rgba(21,101,192,0.4) 100%); z-index: 2; }
-        .hero-particles { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
-        .particle { position: absolute; width: 4px; height: 4px; background: var(--cyan); border-radius: 50%; opacity: 0; animation: floatUp var(--dur) ease-in var(--delay) infinite; }
-        @keyframes floatUp { 0% { opacity: 0; transform: translateY(0) scale(0); } 20% { opacity: 0.8; transform: translateY(-20px) scale(1); } 100% { opacity: 0; transform: translateY(-120px) scale(0.5); } }
-        
-        .hero-content { position: relative; z-index: 4; width: 100%; text-align: center; padding-top: 80px; }
-        .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; background: rgba(0,180,216,0.15); border: 1px solid rgba(0,180,216,0.3); color: var(--cyan); padding: 8px 20px; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; animation: fadeDown 0.8s ease both; }
-        .hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 20px; height: 1px; background: var(--cyan); }
-        .hero h1 { color: var(--white); font-size: clamp(3rem, 8vw, 6.5rem); margin-bottom: 12px; animation: fadeDown 0.8s ease 0.1s both; }
-        .hero h1 .highlight { color: var(--cyan); position: relative; display: inline-block; }
-        .hero h1 .highlight::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--cyan), transparent); border-radius: 2px; }
-        .hero-city { font-size: clamp(1.5rem, 4vw, 3rem); color: var(--silver); font-family: 'Barlow Condensed', sans-serif; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 30px; animation: fadeDown 0.8s ease 0.2s both; }
-        .hero-desc { color: rgba(200,214,229,0.85); font-size: 1.1rem; max-width: 580px; margin: 0 auto 40px; line-height: 1.7; animation: fadeDown 0.8s ease 0.3s both; }
-        .hero-ctas { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; animation: fadeDown 0.8s ease 0.4s both; }
-        
-        .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--cyan); color: var(--navy); padding: 16px 36px; border-radius: 4px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; box-shadow: 0 0 30px rgba(0,180,216,0.3); }
-        .btn-primary:hover { background: var(--white); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,180,216,0.4); }
-        .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--white); padding: 16px 36px; border-radius: 4px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s; }
-        .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-3px); }
+        /* ─── HERO COM VÍDEO ─── */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
 
-        .scroll-hint { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 4; display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.4); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; animation: bounce 2s ease infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
 
-        /* ─── STATS & TRUST (NOVO GOOGLE REVIEWS) ─── */
-        .stats-bar { background: var(--navy); border-bottom: 3px solid var(--cyan); }
-        .stats-inner { display: flex; justify-content: space-around; align-items: center; padding: 28px 24px; gap: 20px; flex-wrap: wrap; }
-        .stat-item { text-align: center; color: var(--white); }
-        .stat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.2rem; color: var(--cyan); display: block; line-height: 1; }
-        .stat-label { font-size: 0.8rem; color: var(--silver); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; display: block; }
-        .stat-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.1); }
-        
-        .trust-badge { display: flex; align-items: center; gap: 15px; padding-left: 20px; }
-        .trust-stars { color: var(--star); font-size: 1.2rem; }
-        .trust-text { text-align: left; }
-        .trust-text strong { display: block; color: var(--white); font-size: 1.1rem; line-height: 1.2; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.05em; }
-        .trust-text span { color: var(--silver); font-size: 0.85rem; }
+        /* Fallback quando não há vídeo — grade animada */
+        .hero-bg-fallback {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(21,101,192,0.35) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 30%, rgba(0,180,216,0.2) 0%, transparent 50%),
+                var(--navy);
+            z-index: 0;
+        }
 
-        /* ─── GERAIS ─── */
+        /* Grade tecnológica animada */
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background-image:
+                linear-gradient(rgba(0,180,216,0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,180,216,0.07) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 60px 60px; }
+        }
+
+        /* Overlay escuro sobre o vídeo */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(13,27,42,0.88) 0%,
+                rgba(13,27,42,0.65) 50%,
+                rgba(21,101,192,0.4) 100%
+            );
+            z-index: 2;
+        }
+
+        /* Partículas decorativas */
+        .hero-particles {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: var(--cyan);
+            border-radius: 50%;
+            opacity: 0;
+            animation: floatUp var(--dur) ease-in var(--delay) infinite;
+        }
+
+        @keyframes floatUp {
+            0% { opacity: 0; transform: translateY(0) scale(0); }
+            20% { opacity: 0.8; transform: translateY(-20px) scale(1); }
+            100% { opacity: 0; transform: translateY(-120px) scale(0.5); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 4;
+            width: 100%;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0,180,216,0.15);
+            border: 1px solid rgba(0,180,216,0.3);
+            color: var(--cyan);
+            padding: 8px 20px;
+            border-radius: 2px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            animation: fadeDown 0.8s ease both;
+        }
+
+        .hero-eyebrow::before,
+        .hero-eyebrow::after {
+            content: '';
+            width: 20px; height: 1px;
+            background: var(--cyan);
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: clamp(3rem, 8vw, 6.5rem);
+            margin-bottom: 12px;
+            animation: fadeDown 0.8s ease 0.1s both;
+        }
+
+        .hero h1 .highlight {
+            color: var(--cyan);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 4px; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--cyan), transparent);
+            border-radius: 2px;
+        }
+
+        .hero-city {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            color: var(--silver);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            animation: fadeDown 0.8s ease 0.2s both;
+        }
+
+        .hero-desc {
+            color: rgba(200,214,229,0.85);
+            font-size: 1.1rem;
+            max-width: 580px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            animation: fadeDown 0.8s ease 0.3s both;
+        }
+
+        .hero-ctas {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: fadeDown 0.8s ease 0.4s both;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--cyan);
+            color: var(--navy);
+            padding: 16px 36px;
+            border-radius: 4px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 0 30px rgba(0,180,216,0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,180,216,0.4);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--white);
+            padding: 16px 36px;
+            border-radius: 4px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+            transform: translateY(-3px);
+        }
+
+        /* Scroll indicator */
+        .scroll-hint {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            animation: bounce 2s ease infinite;
+        }
+
+        .scroll-hint i { font-size: 1.2rem; }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+
+        /* Stats bar logo abaixo do hero */
+        .stats-bar {
+            background: var(--navy);
+            border-bottom: 3px solid var(--cyan);
+        }
+
+        .stats-inner {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 28px 24px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .stat-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 2.2rem;
+            color: var(--cyan);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--silver);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 4px;
+            display: block;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* ─── SEÇÕES GERAIS ─── */
         .section { padding: 100px 0; }
         .section-alt { background: var(--white); }
-        .label-tag { display: inline-block; color: var(--cyan); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
-        .label-tag::before { content: '— '; color: var(--blue); }
-        .section-heading { font-size: clamp(2rem, 4vw, 3rem); color: var(--navy); margin-bottom: 20px; }
+
+        .label-tag {
+            display: inline-block;
+            color: var(--cyan);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .label-tag::before {
+            content: '— ';
+            color: var(--blue);
+        }
+
+        .section-heading {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+
         .section-heading span { color: var(--cyan); }
-        .heading-line { width: 50px; height: 4px; background: linear-gradient(90deg, var(--cyan), var(--blue)); border-radius: 2px; margin-bottom: 20px; }
+
+        .heading-line {
+            width: 50px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--cyan), var(--blue));
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
 
         /* ─── SERVIÇOS ─── */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-        .service-card { background: var(--white); border-radius: 8px; padding: 36px 28px; border: 1px solid #E2EAF4; transition: all 0.35s ease; position: relative; overflow: hidden; }
-        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0; background: linear-gradient(180deg, var(--cyan), var(--blue)); transition: height 0.35s ease; border-radius: 0 0 4px 0; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 36px 28px;
+            border: 1px solid #E2EAF4;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px; height: 0;
+            background: linear-gradient(180deg, var(--cyan), var(--blue));
+            transition: height 0.35s ease;
+            border-radius: 0 0 4px 0;
+        }
+
         .service-card:hover::before { height: 100%; }
-        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(21,101,192,0.12); border-color: transparent; }
-        .service-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3.5rem; color: rgba(0,180,216,0.1); line-height: 1; margin-bottom: 16px; display: block; }
-        .service-icon-wrap { width: 56px; height: 56px; background: linear-gradient(135deg, var(--blue), var(--cyan)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: 20px; }
-        .service-card h3 { font-size: 1.4rem; color: var(--navy); margin-bottom: 12px; }
-        .service-card p { color: var(--gray); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
-        .service-cta { display: inline-flex; align-items: center; gap: 6px; color: var(--blue); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(21,101,192,0.12);
+            border-color: transparent;
+        }
+
+        .service-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 3.5rem;
+            color: rgba(0,180,216,0.1);
+            line-height: 1;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .service-icon-wrap {
+            width: 56px; height: 56px;
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--blue);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
         .service-cta:hover { color: var(--cyan); gap: 10px; }
 
         /* ─── MARCAS ─── */
-        .brands-section { background: var(--navy); padding: 40px 0; overflow: hidden; }
-        .brands-label { text-align: center; color: var(--gray); font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px; }
-        .brands-track { display: flex; gap: 60px; align-items: center; animation: marquee 18s linear infinite; width: max-content; }
-        .brands-track span { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.3rem; color: rgba(255,255,255,0.25); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; transition: color 0.3s; }
+        .brands-section {
+            background: var(--navy);
+            padding: 40px 0;
+            overflow: hidden;
+        }
+
+        .brands-label {
+            text-align: center;
+            color: var(--gray);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .brands-track-wrap { overflow: hidden; }
+
+        .brands-track {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            animation: marquee 18s linear infinite;
+            width: max-content;
+        }
+
+        .brands-track span {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.25);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            transition: color 0.3s;
+        }
+
         .brands-track span:hover { color: var(--cyan); }
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
 
         /* ─── CTA BANNER ─── */
-        .cta-section { background: linear-gradient(135deg, var(--blue) 0%, #0D47A1 100%); padding: 80px 0; position: relative; overflow: hidden; }
-        .cta-section::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 40px 40px; }
-        .cta-inner { position: relative; text-align: center; }
-        .cta-section h2 { color: var(--white); font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 16px; }
-        .cta-section p { color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 550px; margin: 0 auto 36px; }
+        .cta-section {
+            background: linear-gradient(135deg, var(--blue) 0%, #0D47A1 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
 
-        /* ─── PORTFÓLIO (CORRIGIDO PARA FOTOS LOCAIS) ─── */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-        .portfolio-item { position: relative; border-radius: 10px; overflow: hidden; background: var(--navy); aspect-ratio: 4/3; cursor: pointer; }
-        .portfolio-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease, filter 0.5s ease; }
-        .portfolio-item:hover img { transform: scale(1.05); filter: brightness(0.55); }
-        .portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,27,42,0.92) 0%, transparent 55%); display: flex; flex-direction: column; justify-content: flex-end; padding: 16px; opacity: 0; transition: opacity 0.4s ease; }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .cta-inner {
+            position: relative;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: var(--white);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.75);
+            font-size: 1.1rem;
+            max-width: 550px;
+            margin: 0 auto 36px;
+        }
+
+        /* ─── GALERIA ─── */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: var(--navy);
+        }
+
+        .gallery-item img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+            filter: brightness(0.5);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13,27,42,0.9) 0%, transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        .gallery-overlay h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+        }
+
+        .gallery-overlay span {
+            color: var(--cyan);
+            font-size: 0.8rem;
+            display: block;
+            margin-top: 2px;
+        }
+
+        /* ─── PORTFÓLIO MISTO (vídeos + fotos) ─── */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--navy);
+            aspect-ratio: 9/16; /* vertical — padrão de vídeo de celular */
+            cursor: pointer;
+        }
+
+        .portfolio-item video,
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .portfolio-item:hover video,
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+            filter: brightness(0.55);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13,27,42,0.92) 0%, transparent 55%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 16px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
         .portfolio-item:hover .portfolio-overlay { opacity: 1; }
-        .portfolio-tag { display: inline-flex; align-items: center; gap: 5px; background: var(--cyan); color: var(--navy); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; width: fit-content; margin-bottom: 6px; }
-        .portfolio-overlay h4 { color: var(--white); font-size: 1rem; margin-bottom: 2px; }
 
-        /* ─── DEPOIMENTOS E FAQ (NOVOS COMPONENTES DO GPT) ─── */
-        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 40px; }
-        .review-card { background: var(--white); padding: 30px; border-radius: 12px; border: 1px solid #E2EAF4; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .review-stars { color: var(--star); margin-bottom: 15px; font-size: 1.1rem; }
-        .review-text { font-size: 1rem; color: var(--navy); font-style: italic; margin-bottom: 20px; line-height: 1.6; }
-        .review-author { display: flex; align-items: center; gap: 15px; }
-        .author-avatar { width: 45px; height: 45px; background: linear-gradient(135deg, var(--blue), var(--cyan)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.2rem; }
-        .author-info h4 { font-size: 1.1rem; margin: 0; text-transform: none; font-family: 'DM Sans', sans-serif; letter-spacing: normal; color: var(--navy); }
-        .author-info span { color: var(--gray); font-size: 0.85rem; }
+        .portfolio-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--cyan);
+            color: var(--navy);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 20px;
+            width: fit-content;
+            margin-bottom: 6px;
+        }
 
-        .faq-grid { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 800px; margin: 40px auto 0; }
-        .faq-item { background: var(--white); border-radius: 8px; overflow: hidden; border: 1px solid #E2EAF4; }
-        .faq-question { padding: 20px 24px; cursor: pointer; font-weight: 600; color: var(--navy); display: flex; justify-content: space-between; align-items: center; background: var(--white); transition: background 0.3s; }
-        .faq-question:hover { background: var(--bg); }
-        .faq-answer { padding: 0 24px; max-height: 0; overflow: hidden; transition: all 0.3s ease; color: var(--gray); line-height: 1.6; }
-        .faq-item.active .faq-answer { padding: 20px 24px; max-height: 200px; border-top: 1px solid #E2EAF4; }
-        .faq-item.active .faq-question i { transform: rotate(180deg); color: var(--cyan); }
+        .portfolio-overlay h4 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
 
-        /* ─── DIFERENCIAIS E PASSOS ─── */
-        .diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
-        .diff-card { text-align: center; padding: 40px 24px; background: var(--white); border-radius: 8px; border-bottom: 4px solid transparent; transition: all 0.3s; }
-        .diff-card:hover { border-color: var(--cyan); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-        .diff-icon { width: 72px; height: 72px; background: linear-gradient(135deg, rgba(21,101,192,0.1), rgba(0,180,216,0.15)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.8rem; color: var(--blue); transition: all 0.3s; }
-        .diff-card:hover .diff-icon { background: linear-gradient(135deg, var(--blue), var(--cyan)); color: white; }
+        .portfolio-overlay span {
+            color: var(--silver);
+            font-size: 0.78rem;
+        }
+
+        /* Ícone de play nos vídeos */
+        .portfolio-item:has(video)::after {
+            content: '\F50E';
+            font-family: 'bootstrap-icons';
+            position: absolute;
+            top: 12px; right: 12px;
+            width: 30px; height: 30px;
+            background: rgba(0,180,216,0.85);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            line-height: 30px;
+            text-align: center;
+            opacity: 0.9;
+        }
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .diff-card {
+            text-align: center;
+            padding: 40px 24px;
+            background: var(--white);
+            border-radius: 8px;
+            border-bottom: 4px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .diff-card:hover {
+            border-color: var(--cyan);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .diff-icon {
+            width: 72px; height: 72px;
+            background: linear-gradient(135deg, rgba(21,101,192,0.1), rgba(0,180,216,0.15));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            color: var(--blue);
+            transition: all 0.3s;
+        }
+
+        .diff-card:hover .diff-icon {
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
+            color: white;
+        }
+
         .diff-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
-        .diff-card p { color: var(--gray); font-size: 0.9rem; line-height: 1.6; }
+        .diff-card p { color: var(--gray); font-size: 0.9rem; line-height: 1.6; font-family: 'Barlow Condensed', sans-serif; font-weight: 400; }
 
-        .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; }
-        .steps-row::before { content: ''; position: absolute; top: 40px; left: 16.66%; right: 16.66%; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--blue), var(--cyan)); z-index: 0; }
-        .step { text-align: center; position: relative; z-index: 1; }
-        .step-num { width: 80px; height: 80px; background: linear-gradient(135deg, var(--blue), var(--cyan)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2rem; color: white; box-shadow: 0 8px 24px rgba(21,101,192,0.3); }
+        /* ─── COMO FUNCIONA ─── */
+        .steps-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            position: relative;
+        }
+
+        .steps-row::before {
+            content: '';
+            position: absolute;
+            top: 40px; left: 16.66%; right: 16.66%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--cyan), var(--blue), var(--cyan));
+            z-index: 0;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-num {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 8px 24px rgba(21,101,192,0.3);
+        }
+
         .step h3 { font-size: 1.3rem; margin-bottom: 10px; }
         .step p { color: var(--gray); font-size: 0.9rem; }
 
         /* ─── CONTATO ─── */
-        .contact-section { background: var(--navy); padding: 100px 0; }
-        .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .contact-section {
+            background: var(--navy);
+            padding: 100px 0;
+        }
+
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
         .contact-wrap .label-tag { color: var(--cyan); }
         .contact-wrap .section-heading { color: var(--white); }
         .contact-wrap .section-heading span { color: var(--cyan); }
+
         .contact-items { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
-        .contact-item { display: flex; align-items: center; gap: 20px; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 3px solid var(--cyan); transition: background 0.3s; }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            border-left: 3px solid var(--cyan);
+            transition: background 0.3s;
+        }
+
         .contact-item:hover { background: rgba(0,180,216,0.08); }
-        .contact-item-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--blue), var(--cyan)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: white; flex-shrink: 0; }
-        .contact-item strong { display: block; color: var(--cyan); font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+
+        .contact-item-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--cyan);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
         .contact-item span { color: var(--silver); font-size: 0.95rem; }
-        .map-wrap { border-radius: 12px; overflow: hidden; height: 420px; border: 2px solid rgba(0,180,216,0.2); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+
+        .map-wrap {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 420px;
+            border: 2px solid rgba(0,180,216,0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
         .map-wrap iframe { width: 100%; height: 100%; border: 0; }
 
         /* ─── FOOTER ─── */
-        footer { background: #060D14; padding: 60px 0 30px; border-top: 1px solid rgba(255,255,255,0.06); }
-        .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-        .footer-brand p { color: var(--gray); font-size: 0.9rem; line-height: 1.7; margin: 16px 0 24px; max-width: 280px; }
+        footer {
+            background: #060D14;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin: 16px 0 24px;
+            max-width: 280px;
+        }
+
         .footer-social { display: flex; gap: 12px; }
-        .footer-social a { width: 38px; height: 38px; background: rgba(255,255,255,0.06); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 1rem; text-decoration: none; transition: all 0.3s; }
-        .footer-social a:hover { background: var(--cyan); color: var(--navy); }
-        .footer-col h4 { color: var(--white); font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+        .footer-social a {
+            width: 38px; height: 38px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--cyan);
+            color: var(--navy);
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
         .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-        .footer-links a { color: var(--gray); text-decoration: none; font-size: 0.9rem; transition: all 0.3s; display: flex; align-items: center; gap: 6px; }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
         .footer-links a:hover { color: var(--cyan); padding-left: 6px; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .footer-links a i { font-size: 0.75rem; }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
         .footer-bottom p { color: var(--gray); font-size: 0.85rem; }
         .footer-bottom strong { color: var(--cyan); }
 
-        .wa-float { position: fixed; bottom: 30px; right: 30px; width: 65px; height: 65px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.2rem; text-decoration: none; box-shadow: 0 8px 25px rgba(37,211,102,0.4); z-index: 999; transition: all 0.3s; animation: waPulse 2.5s ease infinite; }
-        .wa-float:hover { transform: scale(1.1) translateY(-4px); box-shadow: 0 16px 35px rgba(37,211,102,0.5); }
-        @keyframes waPulse { 0%, 100% { box-shadow: 0 8px 25px rgba(37,211,102,0.4); } 50% { box-shadow: 0 8px 25px rgba(37,211,102,0.4), 0 0 0 12px rgba(37,211,102,0.12); } }
-
-        /* ─── ANIMAÇÕES E RESPONSIVO ─── */
-        @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-
-        @media (max-width: 992px) { 
-            .contact-wrap { grid-template-columns: 1fr; } .map-wrap { height: 300px; } 
-            .footer-top { grid-template-columns: 1fr 1fr; } 
-            .portfolio-grid { grid-template-columns: repeat(2, 1fr); } 
-            .steps-row { grid-template-columns: 1fr; gap: 24px; } .steps-row::before { display: none; } 
-            .stats-inner { justify-content: flex-start; }
-            .stat-divider { display: none; }
-            .trust-badge { border-left: none; padding-left: 0; width: 100%; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+        /* ─── WHATSAPP FLOAT ─── */
+        .wa-float {
+            position: fixed;
+            bottom: 30px; right: 30px;
+            width: 65px; height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.2rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+            z-index: 999;
+            transition: all 0.3s;
+            animation: waPulse 2.5s ease infinite;
         }
+
+        .wa-float:hover {
+            transform: scale(1.1) translateY(-4px);
+            box-shadow: 0 16px 35px rgba(37,211,102,0.5);
+        }
+
+        @keyframes waPulse {
+            0%, 100% { box-shadow: 0 8px 25px rgba(37,211,102,0.4); }
+            50% { box-shadow: 0 8px 25px rgba(37,211,102,0.4), 0 0 0 12px rgba(37,211,102,0.12); }
+        }
+
+        /* ─── ANIMAÇÕES ─── */
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 992px) {
+            .contact-wrap { grid-template-columns: 1fr; }
+            .map-wrap { height: 300px; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+            .steps-row { grid-template-columns: 1fr; gap: 24px; }
+            .steps-row::before { display: none; }
+        }
+
         @media (max-width: 768px) {
             .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); padding: 20px 24px; gap: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
             .nav-links.open { display: flex; }
             .mobile-btn { display: block; }
             .hero h1 { font-size: 2.8rem; }
+            .stats-inner { gap: 12px; }
+            .stat-divider { display: none; }
             .footer-top { grid-template-columns: 1fr; }
             .footer-bottom { flex-direction: column; text-align: center; }
-            .portfolio-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
 
+    <!-- HEADER -->
     <header id="site-header">
         <div class="nav-inner">
-            <a href="#" class="logo"><img src="./lel-arcondicionado.png" alt="L&L Ar-Condicionado" style="background:transparent; border:none; box-shadow:none;"></a>
+            <a href="#" class="logo"><img src="./lel-arcondicionado.png" alt="L&L Ar-Condicionado"></a>
             <nav>
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#resultados">Resultados</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li><a href="https://wa.me/5515998000463" class="btn-nav" onclick="registrarConversaoWhats()">Orçamento Rápido</a></li>
+                    <li><a href="https://wa.me/5515998000463" class="btn-nav" onclick="registrarConversaoWhats()">Orçamento Grátis</a></li>
                 </ul>
             </nav>
             <div class="mobile-btn" id="mobile-btn"><i class="bi bi-list"></i></div>
         </div>
     </header>
 
+    <!-- HERO COM VÍDEO -->
     <section class="hero" id="inicio">
+        <!-- Fundo: tente carregar o vídeo, senão usa o fallback visual -->
+        <video class="hero-video" autoplay muted loop playsinline poster="./hero_ar.png">
+            <source src="./hero_video.mp4" type="video/mp4">
+        </video>
         <div class="hero-bg-fallback"></div>
         <div class="hero-grid"></div>
         <div class="hero-overlay"></div>
+
+        <!-- Partículas decorativas -->
         <div class="hero-particles" id="particles"></div>
 
         <div class="hero-content container">
-            <div class="hero-eyebrow">Climatização & Manutenção</div>
-            <h1>Especialistas em<br><span class="highlight">Ar Condicionado</span></h1>
-            <p class="hero-city">Sorocaba e Região</p>
-            <p class="hero-desc">Equipe técnica qualificada para instalação, limpeza profunda e manutenção. O clima perfeito para sua casa ou empresa com garantia L&L.</p>
+            <div class="hero-eyebrow">Instalação & Manutenção</div>
+            <h1>Soluções Completas<br>em <span class="highlight">Ar Condicionado</span></h1>
+            <p class="hero-city">Sorocaba · SP</p>
+            <p class="hero-desc">
+                Equipe técnica especializada para garantir o clima perfeito na sua casa ou empresa.
+                Atendimento ágil, transparência total e serviço garantido.
+            </p>
             <div class="hero-ctas">
                 <a href="https://wa.me/5515998000463" class="btn-primary" onclick="registrarConversaoWhats()">
-                    <i class="bi bi-whatsapp"></i> Falar com Técnico
+                    <i class="bi bi-whatsapp"></i> Falar com Especialista
                 </a>
                 <a href="tel:15998000463" class="btn-secondary">
                     <i class="bi bi-telephone-fill"></i> Ligar Agora
                 </a>
             </div>
         </div>
+
         <div class="scroll-hint">
             <span>Role para ver</span>
             <i class="bi bi-chevron-down"></i>
         </div>
     </section>
 
+    <!-- STATS BAR -->
     <div class="stats-bar">
         <div class="stats-inner container">
             <div class="stat-item">
@@ -326,21 +1144,23 @@
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
-                <span class="stat-num">100%</span>
-                <span class="stat-label">Serviço Garantido</span>
+                <span class="stat-num">8+</span>
+                <span class="stat-label">Anos de Experiência</span>
             </div>
             <div class="stat-divider"></div>
-            <div class="trust-badge">
-                <div style="font-size: 2.5rem; color: #4285F4;"><i class="bi bi-google"></i></div>
-                <div class="trust-text">
-                    <div class="trust-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                    <strong>5.0 Avaliação Google</strong>
-                    <span>Baseado em avaliações reais</span>
-                </div>
+            <div class="stat-item">
+                <span class="stat-num">Todas</span>
+                <span class="stat-label">as Marcas</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Serviço Garantido</span>
             </div>
         </div>
     </div>
 
+    <!-- SERVIÇOS -->
     <section class="section" id="servicos">
         <div class="container">
             <div class="reveal">
@@ -353,127 +1173,175 @@
                     <span class="service-num">01</span>
                     <div class="service-icon-wrap"><i class="bi bi-wind"></i></div>
                     <h3>Limpeza e Higienização</h3>
-                    <p>Remoção completa de ácaros e bactérias. Ar mais puro e economia na conta de luz.</p>
-                    <a href="https://wa.me/5515998000463?text=Olá,%20gostaria%20de%20orçar%20uma%20LIMPEZA" class="service-cta" target="_blank">Solicitar <i class="bi bi-arrow-right"></i></a>
+                    <p>Remoção de ácaros e bactérias. Ar mais puro e economia na conta de energia garantida.</p>
+                    <a href="https://wa.me/5515998000463?text=Olá,%20gostaria%20de%20orçar%20uma%20LIMPEZA" class="service-cta" target="_blank">
+                        Solicitar <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
                 <div class="service-card reveal">
                     <span class="service-num">02</span>
                     <div class="service-icon-wrap"><i class="bi bi-tools"></i></div>
                     <h3>Instalação Padrão</h3>
-                    <p>Montagem técnica de splits com ferramentas de precisão e acabamento invisível.</p>
-                    <a href="https://wa.me/5515998000463?text=Olá,%20gostaria%20de%20orçar%20uma%20INSTALAÇÃO" class="service-cta" target="_blank">Solicitar <i class="bi bi-arrow-right"></i></a>
+                    <p>Montagem técnica de splits com ferramentas de precisão e acabamento impecável.</p>
+                    <a href="https://wa.me/5515998000463?text=Olá,%20gostaria%20de%20orçar%20uma%20INSTALAÇÃO" class="service-cta" target="_blank">
+                        Solicitar <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
                 <div class="service-card reveal">
                     <span class="service-num">03</span>
                     <div class="service-icon-wrap"><i class="bi bi-wrench"></i></div>
                     <h3>Manutenção Corretiva</h3>
-                    <p>Máquina pingando ou não gela? Diagnosticamos e resolvemos o problema no local.</p>
-                    <a href="https://wa.me/5515998000463?text=Olá,%20preciso%20de%20MANUTENÇÃO" class="service-cta" target="_blank">Solicitar <i class="bi bi-arrow-right"></i></a>
+                    <p>Máquina pingando ou não gela? Diagnosticamos e resolvemos o problema rapidamente.</p>
+                    <a href="https://wa.me/5515998000463?text=Olá,%20preciso%20de%20MANUTENÇÃO" class="service-cta" target="_blank">
+                        Solicitar <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
                 <div class="service-card reveal">
                     <span class="service-num">04</span>
                     <div class="service-icon-wrap"><i class="bi bi-house-gear"></i></div>
                     <h3>Pré-Instalação em Obras</h3>
-                    <p>Passagem de infraestrutura completa durante a construção ou reforma do imóvel.</p>
-                    <a href="https://wa.me/5515998000463?text=Olá,%20preciso%20de%20INFRAESTRUTURA" class="service-cta" target="_blank">Solicitar <i class="bi bi-arrow-right"></i></a>
+                    <p>Passagem de infraestrutura completa durante a construção ou reforma do seu imóvel.</p>
+                    <a href="https://wa.me/5515998000463?text=Olá,%20preciso%20de%20INFRAESTRUTURA" class="service-cta" target="_blank">
+                        Solicitar <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- MARCAS (marquee) -->
     <div class="brands-section">
         <p class="brands-label">Trabalhamos com as melhores marcas</p>
         <div class="brands-track-wrap">
             <div class="brands-track">
-                <span>LG</span><span>Samsung</span><span>Midea</span><span>Fujitsu</span><span>Daikin</span><span>TCL</span><span>Gree</span><span>Elgin</span><span>Springer</span><span>Hitachi</span><span>Carrier</span>
-                <span>LG</span><span>Samsung</span><span>Midea</span><span>Fujitsu</span><span>Daikin</span><span>TCL</span><span>Gree</span><span>Elgin</span><span>Springer</span><span>Hitachi</span><span>Carrier</span>
+                <span>LG</span><span>Samsung</span><span>Midea</span><span>Fujitsu</span>
+                <span>Daikin</span><span>TCL</span><span>Gree</span><span>Elgin</span>
+                <span>Springer</span><span>Hitachi</span><span>Carrier</span>
+                <!-- Duplicado para loop -->
+                <span>LG</span><span>Samsung</span><span>Midea</span><span>Fujitsu</span>
+                <span>Daikin</span><span>TCL</span><span>Gree</span><span>Elgin</span>
+                <span>Springer</span><span>Hitachi</span><span>Carrier</span>
             </div>
         </div>
     </div>
 
+    <!-- CTA BANNER -->
+    <section class="cta-section">
+        <div class="container cta-inner reveal">
+            <h2>Precisa de um técnico hoje?</h2>
+            <p>Atendimento prioritário em Sorocaba e região. Orçamento sem compromisso.</p>
+            <a href="https://wa.me/5515998000463" class="btn-primary" onclick="registrarConversaoWhats()" style="margin: 0 auto;">
+                <i class="bi bi-whatsapp"></i> Chamar no WhatsApp agora
+            </a>
+        </div>
+    </section>
+
+    <!-- GALERIA MISTA: VÍDEOS + FOTOS -->
     <section class="section section-alt" id="resultados">
         <div class="container">
             <div class="reveal">
                 <span class="label-tag">Nossos resultados</span>
                 <h2 class="section-heading">Projetos <span>Entregues</span></h2>
                 <div class="heading-line"></div>
-                <p style="color:var(--gray); margin-bottom: 40px;">Veja a qualidade das nossas instalações e higienizações.</p>
+                <p style="color:var(--gray); margin-bottom: 40px; font-size:1rem;">
+                    Veja na prática a qualidade dos nossos serviços — instalações, higienizações e infraestruturas executadas pela nossa equipe.
+                </p>
             </div>
+
+            <!-- Grade principal: 4 vídeos -->
             <div class="portfolio-grid reveal">
+                <!-- Vídeo 1 -->
                 <div class="portfolio-item">
-                    <img src="./foto01.png" alt="Instalação Segura" loading="lazy">
+                    <video autoplay muted loop playsinline>
+                        <source src="./projeto1.mp4" type="video/mp4">
+                    </video>
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
-                        <h4>Instalação de Condensadoras</h4>
+                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
+                        <h4>Instalação Residencial</h4>
+                        <span>Split LG · Sorocaba/SP</span>
                     </div>
                 </div>
+
+                <!-- Vídeo 2 -->
                 <div class="portfolio-item">
-                    <img src="./foto02.png" alt="Limpeza de Ar Condicionado" loading="lazy">
+                    <video autoplay muted loop playsinline>
+                        <source src="./projeto2.mp4" type="video/mp4">
+                    </video>
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
-                        <h4>Limpeza Profunda</h4>
+                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
+                        <h4>Higienização Completa</h4>
+                        <span>Limpeza profunda</span>
                     </div>
                 </div>
+
+                <!-- Vídeo 3 -->
                 <div class="portfolio-item">
-                    <img src="./foto03.png" alt="Obra de Infraestrutura" loading="lazy">
+                    <video autoplay muted loop playsinline>
+                        <source src="./projeto3.mp4" type="video/mp4">
+                    </video>
                     <div class="portfolio-overlay">
-                        <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
-                        <h4>Pré-instalação em Obra</h4>
+                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
+                        <h4>Manutenção Corretiva</h4>
+                        <span>Diagnóstico e reparo</span>
                     </div>
                 </div>
+
+                <!-- Vídeo 4 -->
                 <div class="portfolio-item">
-                    <img src="./foto04.png" alt="Acabamento Impecável" loading="lazy">
+                    <video autoplay muted loop playsinline>
+                        <source src="./projeto4.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
+                        <h4>Pré-Instalação em Obra</h4>
+                        <span>Infraestrutura elétrica</span>
+                    </div>
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="portfolio-item">
+                    <img src="./projeto5.png" alt="Condensadoras LG instaladas" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
+                        <h4>Instalação Padrão</h4>
+                        <span>Condensadoras LG Dual Inverter</span>
+                    </div>
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="portfolio-item">
+                    <img src="./projeto6.png" alt="Split premium instalado" loading="lazy">
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
                         <h4>Acabamento Impecável</h4>
+                        <span>Split Black instalado</span>
+                    </div>
+                </div>
+
+                <!-- Foto 7 -->
+                <div class="portfolio-item">
+                    <img src="./projeto7.png" alt="Infraestrutura em apartamento" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
+                        <h4>Infraestrutura Vertical</h4>
+                        <span>Instalação em apartamento</span>
                     </div>
                 </div>
             </div>
+
             <div style="text-align:center; margin-top: 50px;" class="reveal">
+                <p style="color:var(--gray); margin-bottom: 16px; font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.05em; text-transform:uppercase;">
+                    Acompanhe nossos trabalhos diários no Instagram
+                </p>
                 <a href="https://www.instagram.com/llarcondicionados/" target="_blank" class="btn-secondary" style="border-color:#E1306C; color:#E1306C;">
-                    <i class="bi bi-instagram"></i> Acompanhe o dia a dia no Instagram
+                    <i class="bi bi-instagram"></i> @llarcondicionados
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="section" id="depoimentos">
-        <div class="container">
-            <div class="reveal" style="text-align:center; margin-bottom:60px;">
-                <span class="label-tag">Confiança</span>
-                <h2 class="section-heading">O que os <span>Clientes Dizem</span></h2>
-                <div class="heading-line" style="margin:0 auto;"></div>
-            </div>
-            <div class="reviews-grid">
-                <div class="review-card reveal">
-                    <div class="review-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                    <p class="review-text">"Atendimento rápido e instalação impecável. Fizeram um serviço muito limpo na minha sala."</p>
-                    <div class="review-author">
-                        <div class="author-avatar">J</div>
-                        <div class="author-info"><h4>João Silva</h4><span>Sorocaba, SP</span></div>
-                    </div>
-                </div>
-                <div class="review-card reveal">
-                    <div class="review-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                    <p class="review-text">"Chegaram no horário combinado e resolveram o problema do ar que não gelava. Recomendo."</p>
-                    <div class="review-author">
-                        <div class="author-avatar">M</div>
-                        <div class="author-info"><h4>Maria Oliveira</h4><span>Votorantim, SP</span></div>
-                    </div>
-                </div>
-                <div class="review-card reveal">
-                    <div class="review-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-                    <p class="review-text">"Excelente trabalho de infraestrutura na reforma do meu apartamento. Tudo no capricho."</p>
-                    <div class="review-author">
-                        <div class="author-avatar">C</div>
-                        <div class="author-info"><h4>Carlos Souza</h4><span>Sorocaba, SP</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section-alt">
+    <!-- DIFERENCIAIS -->
+    <section class="section">
         <div class="container">
             <div class="reveal" style="text-align:center; margin-bottom:60px;">
                 <span class="label-tag">Diferenciais</span>
@@ -484,55 +1352,56 @@
                 <div class="diff-card reveal">
                     <div class="diff-icon"><i class="bi bi-person-badge"></i></div>
                     <h3>Especialistas</h3>
-                    <p>Técnicos certificados nas principais marcas do mercado.</p>
+                    <p>Técnicos certificados com anos de experiência nas principais marcas do mercado.</p>
                 </div>
                 <div class="diff-card reveal">
                     <div class="diff-icon"><i class="bi bi-lightning-charge"></i></div>
                     <h3>Agilidade</h3>
-                    <p>Resolvemos com rapidez para não deixar você no calor.</p>
+                    <p>Resolvemos o seu problema com rapidez para não deixar você no calor esperando.</p>
                 </div>
                 <div class="diff-card reveal">
                     <div class="diff-icon"><i class="bi bi-droplet-half"></i></div>
                     <h3>Limpeza Absoluta</h3>
-                    <p>Trabalhamos com atenção total à limpeza do seu ambiente.</p>
+                    <p>Trabalhamos com atenção total à limpeza antes e depois de cada serviço.</p>
                 </div>
                 <div class="diff-card reveal">
                     <div class="diff-icon"><i class="bi bi-shield-check"></i></div>
                     <h3>Serviço Garantido</h3>
-                    <p>Garantia em todas as peças e serviços executados.</p>
+                    <p>Garantia em todas as peças e serviços. Seu conforto é nossa responsabilidade.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
+    <!-- COMO FUNCIONA -->
+    <section class="section section-alt">
         <div class="container">
-            <div class="reveal" style="text-align:center; margin-bottom:40px;">
-                <span class="label-tag">Dúvidas Comuns</span>
-                <h2 class="section-heading">Perguntas <span>Frequentes</span></h2>
+            <div class="reveal" style="text-align:center; margin-bottom:60px;">
+                <span class="label-tag">Simples assim</span>
+                <h2 class="section-heading">Como <span>Funciona</span></h2>
                 <div class="heading-line" style="margin:0 auto;"></div>
             </div>
-            <div class="faq-grid reveal">
-                <div class="faq-item">
-                    <div class="faq-question">Vocês fornecem o aparelho de Ar Condicionado? <i class="bi bi-chevron-down"></i></div>
-                    <div class="faq-answer">Trabalhamos focados na prestação de serviço (instalação, infraestrutura e manutenção). Você pode comprar o equipamento da marca de sua preferência e nós realizamos a instalação com total garantia técnica.</div>
+            <div class="steps-row">
+                <div class="step reveal">
+                    <div class="step-num"><i class="bi bi-chat-dots"></i></div>
+                    <h3>Passo 01<br>Orçamento</h3>
+                    <p>Envie uma mensagem no WhatsApp descrevendo seu problema ou necessidade.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">Quanto tempo leva uma instalação? <i class="bi bi-chevron-down"></i></div>
-                    <div class="faq-answer">Uma instalação padrão leva entre 2 e 3 horas. Trabalhamos com cuidado para garantir o vácuo correto do sistema, garantindo a vida útil do seu aparelho.</div>
+                <div class="step reveal">
+                    <div class="step-num"><i class="bi bi-calendar-check"></i></div>
+                    <h3>Passo 02<br>Agendamento</h3>
+                    <p>Escolhemos juntos o melhor horário para sua visita técnica.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">Vocês dão garantia do serviço? <i class="bi bi-chevron-down"></i></div>
-                    <div class="faq-answer">Sim! Todos os nossos serviços (instalação e consertos) acompanham garantia técnica registrada.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Atendem empresas e comércios? <i class="bi bi-chevron-down"></i></div>
-                    <div class="faq-answer">Sim, realizamos manutenção preventiva e corretiva para comércios, escritórios e clínicas, emitindo os laudos necessários.</div>
+                <div class="step reveal">
+                    <div class="step-num"><i class="bi bi-tools"></i></div>
+                    <h3>Passo 03<br>Execução</h3>
+                    <p>Nossa equipe realiza o serviço com qualidade, agilidade e garantia.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CONTATO -->
     <section class="contact-section" id="contato">
         <div class="container">
             <div class="contact-wrap">
@@ -544,7 +1413,7 @@
                         <div class="contact-item">
                             <div class="contact-item-icon"><i class="bi bi-whatsapp"></i></div>
                             <div>
-                                <strong>Telefone / WhatsApp</strong>
+                                <strong>WhatsApp / Telefone</strong>
                                 <span>(15) 99800-0463 / (15) 99111-3066</span>
                             </div>
                         </div>
@@ -573,18 +1442,19 @@
                 </div>
                 <div class="reveal">
                     <div class="map-wrap">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.605663360472!2d-47.4581!3d-23.5015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c58aaeb27f1bd9%3A0xc3f6e1f0e1f0e1f0!2sR.%20Alcides%20Soares%2C%20129%20-%20Jardim%20Pacaembu%2C%20Sorocaba%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://maps.google.com/maps?q=Rua%20Alcides%20Soares,%20129%20-%20Jd.%20Pacaembu,%20Sorocaba&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="./lel-arcondicionado.png" alt="L&L" style="height:60px; object-fit:contain; margin-bottom:12px; filter: brightness(0) invert(1);">
+                    <img src="./lel-arcondicionado.png" alt="L&L" style="height:80px; width:80px; object-fit:cover; border-radius:50%; border:2px solid rgba(0,180,216,0.4); margin-bottom:12px;">
                     <p>Garantindo o conforto térmico da sua família e empresa com segurança, transparência e qualidade.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/llarcondicionados/" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -601,25 +1471,23 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Região de Atendimento</h4>
+                    <h4>Atendimento</h4>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="bi bi-geo-alt"></i> Sorocaba (Base)</a></li>
-                        <li><a href="#"><i class="bi bi-geo-alt"></i> Votorantim & Araçoiaba</a></li>
+                        <li><a href="#"><i class="bi bi-geo-alt"></i> Sorocaba — SP</a></li>
+                        <li><a href="#"><i class="bi bi-clock"></i> Segunda a Sábado</a></li>
                         <li><a href="tel:15998000463"><i class="bi bi-telephone"></i> (15) 99800-0463</a></li>
-                        <li><a href="mailto:llarcondicionados@hotmail.com"><i class="bi bi-envelope"></i> E-mail Oficial</a></li>
+                        <li><a href="mailto:llarcondicionados@hotmail.com"><i class="bi bi-envelope"></i> llarcondicionados@hotmail.com</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div>
-                    <p>© 2026 L&L Ar-Condicionado. Todos os direitos reservados.</p>
-                    <p style="margin-top: 5px; font-size: 0.75rem;">CNPJ: 00.000.000/0001-00</p>
-                </div>
-                <p>Desenvolvido por <strong style="color: var(--cyan);">65.611.420 FLAVIO GONCALES</strong></p>
+                <p>© 2026 L&L Ar-Condicionado. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <strong>65.611.420 FLAVIO GONCALES</strong></p>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp Float -->
     <a href="https://wa.me/5515998000463?text=Olá!%20Vim%20pelo%20site%20da%20L%26L%20Ar-Condicionado%20e%20gostaria%20de%20agendar%20um%20serviço."
        class="wa-float" target="_blank" onclick="registrarConversaoWhats()">
         <i class="bi bi-whatsapp"></i>
@@ -653,16 +1521,6 @@
             `;
             particlesContainer.appendChild(p);
         }
-
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                const isActive = item.classList.contains('active');
-                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-                if (!isActive) item.classList.add('active');
-            });
-        });
 
         // Scroll reveal
         const reveals = document.querySelectorAll('.reveal');
