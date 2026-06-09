@@ -33,7 +33,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://llarcondicionado.com.br/lel-arcondicionado.png">
 
-    <!-- Schema HVACBusiness + FAQ para SEO local -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -103,10 +102,19 @@
         /* ─── HEADER ─── */
         header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: all 0.4s ease; }
         header.scrolled { background: rgba(13,27,42,0.97); backdrop-filter: blur(12px); box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
-        .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; max-width: 1200px; margin: 0 auto; }
+
+        /* ✅ LOGO COM NOME AO LADO */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
 
         .logo img {
-            height: 90px; width: 90px;
+            height: 80px;
+            width: 80px;
             object-fit: cover;
             border-radius: 50%;
             border: 3px solid transparent;
@@ -114,10 +122,40 @@
                         linear-gradient(135deg, var(--cyan), var(--blue)) border-box;
             box-shadow: 0 0 18px rgba(0,180,216,0.2), 0 4px 12px rgba(0,0,0,0.4);
             transition: box-shadow 0.3s, transform 0.3s;
+            flex-shrink: 0;
         }
+
         .logo img:hover {
             box-shadow: 0 0 28px rgba(0,180,216,0.45), 0 4px 20px rgba(0,0,0,0.5);
             transform: scale(1.05);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-text .logo-name {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .logo-text .logo-name span {
+            color: var(--cyan);
+        }
+
+        .logo-text .logo-sub {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 400;
+            font-size: 0.78rem;
+            color: var(--silver);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
         }
 
         .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
@@ -125,7 +163,6 @@
         .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--cyan); transition: width 0.3s; }
         .nav-links a:hover { color: var(--cyan); }
         .nav-links a:hover::after { width: 100%; }
-
         .btn-nav { background: var(--cyan); color: var(--navy) !important; padding: 10px 24px; border-radius: 4px; font-weight: 700 !important; font-size: 0.9rem !important; transition: all 0.3s !important; }
         .btn-nav:hover { background: var(--white) !important; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,180,216,0.4); }
         .btn-nav::after { display: none !important; }
@@ -141,7 +178,6 @@
         .hero-particles { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
         .particle { position: absolute; width: 4px; height: 4px; background: var(--cyan); border-radius: 50%; opacity: 0; animation: floatUp var(--dur) ease-in var(--delay) infinite; }
         @keyframes floatUp { 0% { opacity: 0; transform: translateY(0) scale(0); } 20% { opacity: 0.8; transform: translateY(-20px) scale(1); } 100% { opacity: 0; transform: translateY(-120px) scale(0.5); } }
-
         .hero-content { position: relative; z-index: 4; width: 100%; text-align: center; padding-top: 80px; }
         .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; background: rgba(0,180,216,0.15); border: 1px solid rgba(0,180,216,0.3); color: var(--cyan); padding: 8px 20px; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; animation: fadeDown 0.8s ease both; }
         .hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 20px; height: 1px; background: var(--cyan); }
@@ -151,12 +187,10 @@
         .hero-city { font-size: clamp(1.5rem, 4vw, 3rem); color: var(--silver); font-family: 'Barlow Condensed', sans-serif; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 30px; animation: fadeDown 0.8s ease 0.2s both; }
         .hero-desc { color: rgba(200,214,229,0.85); font-size: 1.1rem; max-width: 580px; margin: 0 auto 40px; line-height: 1.7; animation: fadeDown 0.8s ease 0.3s both; }
         .hero-ctas { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; animation: fadeDown 0.8s ease 0.4s both; }
-
         .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--cyan); color: var(--navy); padding: 16px 36px; border-radius: 4px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; box-shadow: 0 0 30px rgba(0,180,216,0.3); }
         .btn-primary:hover { background: var(--white); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,180,216,0.4); }
         .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--white); padding: 16px 36px; border-radius: 4px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s; }
         .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-3px); }
-
         .scroll-hint { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 4; display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.4); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; animation: bounce 2s ease infinite; }
         .scroll-hint i { font-size: 1.2rem; }
         @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
@@ -207,289 +241,53 @@
         .cta-section h2 { color: var(--white); font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 16px; }
         .cta-section p { color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 550px; margin: 0 auto 36px; }
 
-        /* ─── PORTFÓLIO MISTO (vídeos + fotos) ─── */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-        }
-
-        .portfolio-item {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            background: var(--navy);
-            aspect-ratio: 9/16;
-            cursor: pointer;
-        }
-
-        .portfolio-item video,
-        .portfolio-item img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease, filter 0.5s ease;
-        }
-
-        .portfolio-item:hover video,
-        .portfolio-item:hover img { transform: scale(1.05); filter: brightness(0.55); }
-
-        .portfolio-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(13,27,42,0.92) 0%, transparent 55%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 16px;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
+        /* ─── PORTFÓLIO ─── */
+        .portfolio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+        .portfolio-item { position: relative; border-radius: 10px; overflow: hidden; background: var(--navy); aspect-ratio: 9/16; cursor: pointer; }
+        .portfolio-item video, .portfolio-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease, filter 0.5s ease; }
+        .portfolio-item:hover video, .portfolio-item:hover img { transform: scale(1.05); filter: brightness(0.55); }
+        .portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,27,42,0.92) 0%, transparent 55%); display: flex; flex-direction: column; justify-content: flex-end; padding: 16px; opacity: 0; transition: opacity 0.4s ease; }
         .portfolio-item:hover .portfolio-overlay { opacity: 1; }
-
-        .portfolio-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: var(--cyan);
-            color: var(--navy);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-            font-size: 0.72rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            padding: 3px 10px;
-            border-radius: 20px;
-            width: fit-content;
-            margin-bottom: 6px;
-        }
-
+        .portfolio-tag { display: inline-flex; align-items: center; gap: 5px; background: var(--cyan); color: var(--navy); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; width: fit-content; margin-bottom: 6px; }
         .portfolio-overlay h4 { color: var(--white); font-size: 1rem; margin-bottom: 2px; }
         .portfolio-overlay span { color: var(--silver); font-size: 0.78rem; }
-
-        .portfolio-item:has(video)::after {
-            content: '\F50E';
-            font-family: 'bootstrap-icons';
-            position: absolute;
-            top: 12px; right: 12px;
-            width: 30px; height: 30px;
-            background: rgba(0,180,216,0.85);
-            color: white;
-            border-radius: 50%;
-            font-size: 0.85rem;
-            line-height: 30px;
-            text-align: center;
-            opacity: 0.9;
-        }
+        .portfolio-item:has(video)::after { content: '\F50E'; font-family: 'bootstrap-icons'; position: absolute; top: 12px; right: 12px; width: 30px; height: 30px; background: rgba(0,180,216,0.85); color: white; border-radius: 50%; font-size: 0.85rem; line-height: 30px; text-align: center; opacity: 0.9; }
 
         /* ─── DEPOIMENTOS ─── */
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-
-        .review-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 28px;
-            border: 1px solid #E2EAF4;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .review-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(21,101,192,0.1);
-        }
-
-        .review-stars {
-            color: #F59E0B;
-            font-size: 1rem;
-            margin-bottom: 14px;
-            display: flex;
-            gap: 2px;
-        }
-
-        .review-text {
-            color: var(--gray);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .review-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .review-avatar {
-            width: 42px; height: 42px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 800;
-            font-size: 1.1rem;
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .review-author strong {
-            display: block;
-            color: var(--navy);
-            font-size: 0.95rem;
-            font-family: 'Barlow Condensed', sans-serif;
-        }
-
-        .review-author span {
-            color: var(--gray);
-            font-size: 0.8rem;
-        }
-
-        .google-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--white);
-            border: 1px solid #E2EAF4;
-            border-radius: 50px;
-            padding: 10px 24px;
-            margin: 0 auto 40px;
-        }
-
-        .google-badge .g-logo {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 900;
-            font-size: 1.4rem;
-            background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .google-badge .g-rating {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 800;
-            font-size: 1.1rem;
-            color: var(--navy);
-        }
-
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .review-card { background: var(--white); border-radius: 12px; padding: 28px; border: 1px solid #E2EAF4; transition: all 0.3s; }
+        .review-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(21,101,192,0.1); }
+        .review-stars { color: #F59E0B; font-size: 1rem; margin-bottom: 14px; display: flex; gap: 2px; }
+        .review-text { color: var(--gray); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+        .review-author { display: flex; align-items: center; gap: 12px; }
+        .review-avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; color: white; flex-shrink: 0; }
+        .review-author strong { display: block; color: var(--navy); font-size: 0.95rem; font-family: 'Barlow Condensed', sans-serif; }
+        .review-author span { color: var(--gray); font-size: 0.8rem; }
+        .google-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--white); border: 1px solid #E2EAF4; border-radius: 50px; padding: 10px 24px; margin: 0 auto 40px; }
+        .google-badge .g-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.4rem; background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .google-badge .g-rating { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--navy); }
         .google-badge .g-stars { color: #F59E0B; font-size: 0.85rem; }
         .google-badge .g-count { color: var(--gray); font-size: 0.8rem; }
 
         /* ─── FAQ ─── */
         .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
-
-        .faq-item {
-            background: var(--white);
-            border-radius: 8px;
-            border: 1px solid #E2EAF4;
-            overflow: hidden;
-            transition: box-shadow 0.3s;
-        }
-
+        .faq-item { background: var(--white); border-radius: 8px; border: 1px solid #E2EAF4; overflow: hidden; transition: box-shadow 0.3s; }
         .faq-item:hover { box-shadow: 0 8px 24px rgba(21,101,192,0.08); }
-
-        .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            padding: 20px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            text-align: left;
-            gap: 16px;
-        }
-
-        .faq-question span {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 700;
-            font-size: 1.05rem;
-            color: var(--navy);
-            text-transform: uppercase;
-            letter-spacing: 0.02em;
-        }
-
-        .faq-icon {
-            width: 28px; height: 28px;
-            background: rgba(0,180,216,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--cyan);
-            flex-shrink: 0;
-            transition: all 0.3s;
-        }
-
-        .faq-item.open .faq-icon {
-            background: var(--cyan);
-            color: white;
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.3s;
-        }
-
-        .faq-answer p {
-            padding: 0 24px 20px;
-            color: var(--gray);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            border-top: 1px solid #F0F4F8;
-            padding-top: 16px;
-        }
-
+        .faq-question { width: 100%; background: none; border: none; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left; gap: 16px; }
+        .faq-question span { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--navy); text-transform: uppercase; letter-spacing: 0.02em; }
+        .faq-icon { width: 28px; height: 28px; background: rgba(0,180,216,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--cyan); flex-shrink: 0; transition: all 0.3s; }
+        .faq-item.open .faq-icon { background: var(--cyan); color: white; transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-answer p { padding: 16px 24px 20px; color: var(--gray); font-size: 0.95rem; line-height: 1.7; border-top: 1px solid #F0F4F8; }
         .faq-item.open .faq-answer { max-height: 200px; }
 
         /* ─── REGIÕES ─── */
-        .regions-section {
-            background: var(--navy);
-            padding: 80px 0;
-        }
-
-        .regions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 12px;
-            margin-top: 40px;
-        }
-
-        .region-item {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(0,180,216,0.15);
-            border-radius: 8px;
-            padding: 16px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s;
-        }
-
-        .region-item:hover {
-            background: rgba(0,180,216,0.1);
-            border-color: var(--cyan);
-            transform: translateY(-3px);
-        }
-
+        .regions-section { background: var(--navy); padding: 80px 0; }
+        .regions-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-top: 40px; }
+        .region-item { background: rgba(255,255,255,0.05); border: 1px solid rgba(0,180,216,0.15); border-radius: 8px; padding: 16px 20px; display: flex; align-items: center; gap: 10px; transition: all 0.3s; }
+        .region-item:hover { background: rgba(0,180,216,0.1); border-color: var(--cyan); transform: translateY(-3px); }
         .region-item i { color: var(--cyan); font-size: 0.9rem; flex-shrink: 0; }
-
-        .region-item span {
-            color: var(--silver);
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            letter-spacing: 0.05em;
-        }
+        .region-item span { color: var(--silver); font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.05em; }
 
         /* ─── DIFERENCIAIS ─── */
         .diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
@@ -569,6 +367,10 @@
             .footer-top { grid-template-columns: 1fr; }
             .footer-bottom { flex-direction: column; text-align: center; }
             .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            /* Nome do logo some no mobile para não atrapalhar */
+            .logo-text .logo-sub { display: none; }
+            .logo-text .logo-name { font-size: 1.2rem; }
+            .logo img { height: 60px; width: 60px; }
         }
     </style>
 </head>
@@ -576,7 +378,14 @@
 
     <header id="site-header">
         <div class="nav-inner">
-            <a href="#" class="logo"><img src="./lel-arcondicionado.png" alt="L&L Ar-Condicionado"></a>
+            <!-- ✅ LOGO COM NOME AO LADO -->
+            <a href="#" class="logo">
+                <img src="./lel-arcondicionado.png" alt="L&L Ar-Condicionado">
+                <div class="logo-text">
+                    <span class="logo-name">L&L <span>Ar-Condicionado</span></span>
+                    <span class="logo-sub">Sorocaba · SP</span>
+                </div>
+            </a>
             <nav>
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#inicio">Início</a></li>
@@ -706,70 +515,17 @@
                 </p>
             </div>
             <div class="portfolio-grid reveal">
-                <div class="portfolio-item">
-                    <video autoplay muted loop playsinline><source src="./projeto1.mp4" type="video/mp4"></video>
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
-                        <h4>Instalação Residencial</h4>
-                        <span>Split LG · Sorocaba/SP</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <video autoplay muted loop playsinline><source src="./projeto2.mp4" type="video/mp4"></video>
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
-                        <h4>Higienização Completa</h4>
-                        <span>Limpeza profunda</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <video autoplay muted loop playsinline><source src="./projeto3.mp4" type="video/mp4"></video>
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
-                        <h4>Manutenção Corretiva</h4>
-                        <span>Diagnóstico e reparo</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <video autoplay muted loop playsinline><source src="./projeto4.mp4" type="video/mp4"></video>
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span>
-                        <h4>Pré-Instalação em Obra</h4>
-                        <span>Infraestrutura elétrica</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="./projeto5.png" alt="Condensadoras LG instaladas" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
-                        <h4>Instalação Padrão</h4>
-                        <span>Condensadoras LG Dual Inverter</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="./projeto6.png" alt="Split premium instalado" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
-                        <h4>Acabamento Impecável</h4>
-                        <span>Split Black instalado</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="./projeto7.png" alt="Infraestrutura em apartamento" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span>
-                        <h4>Infraestrutura Vertical</h4>
-                        <span>Instalação em apartamento</span>
-                    </div>
-                </div>
+                <div class="portfolio-item"><video autoplay muted loop playsinline><source src="./projeto1.mp4" type="video/mp4"></video><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span><h4>Instalação Residencial</h4><span>Split LG · Sorocaba/SP</span></div></div>
+                <div class="portfolio-item"><video autoplay muted loop playsinline><source src="./projeto2.mp4" type="video/mp4"></video><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span><h4>Higienização Completa</h4><span>Limpeza profunda</span></div></div>
+                <div class="portfolio-item"><video autoplay muted loop playsinline><source src="./projeto3.mp4" type="video/mp4"></video><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span><h4>Manutenção Corretiva</h4><span>Diagnóstico e reparo</span></div></div>
+                <div class="portfolio-item"><video autoplay muted loop playsinline><source src="./projeto4.mp4" type="video/mp4"></video><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span><h4>Pré-Instalação em Obra</h4><span>Infraestrutura elétrica</span></div></div>
+                <div class="portfolio-item"><img src="./projeto5.png" alt="Condensadoras LG" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span><h4>Instalação Padrão</h4><span>Condensadoras LG Dual Inverter</span></div></div>
+                <div class="portfolio-item"><img src="./projeto6.png" alt="Split premium" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span><h4>Acabamento Impecável</h4><span>Split Black instalado</span></div></div>
+                <div class="portfolio-item"><img src="./projeto7.png" alt="Infraestrutura" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span><h4>Infraestrutura Vertical</h4><span>Instalação em apartamento</span></div></div>
             </div>
             <div style="text-align:center; margin-top:50px;" class="reveal">
-                <p style="color:var(--gray); margin-bottom:16px; font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.05em; text-transform:uppercase;">
-                    Acompanhe nossos trabalhos diários no Instagram
-                </p>
-                <a href="https://www.instagram.com/llarcondicionados/" target="_blank" class="btn-secondary" style="border-color:#E1306C; color:#E1306C;">
-                    <i class="bi bi-instagram"></i> @llarcondicionados
-                </a>
+                <p style="color:var(--gray); margin-bottom:16px; font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:0.05em; text-transform:uppercase;">Acompanhe nossos trabalhos diários no Instagram</p>
+                <a href="https://www.instagram.com/llarcondicionados/" target="_blank" class="btn-secondary" style="border-color:#E1306C; color:#E1306C;"><i class="bi bi-instagram"></i> @llarcondicionados</a>
             </div>
         </div>
     </section>
@@ -782,26 +538,10 @@
                 <div class="heading-line" style="margin:0 auto;"></div>
             </div>
             <div class="diff-grid">
-                <div class="diff-card reveal">
-                    <div class="diff-icon"><i class="bi bi-person-badge"></i></div>
-                    <h3>Especialistas</h3>
-                    <p>Técnicos certificados com anos de experiência nas principais marcas do mercado.</p>
-                </div>
-                <div class="diff-card reveal">
-                    <div class="diff-icon"><i class="bi bi-lightning-charge"></i></div>
-                    <h3>Agilidade</h3>
-                    <p>Resolvemos o seu problema com rapidez para não deixar você no calor esperando.</p>
-                </div>
-                <div class="diff-card reveal">
-                    <div class="diff-icon"><i class="bi bi-droplet-half"></i></div>
-                    <h3>Limpeza Absoluta</h3>
-                    <p>Trabalhamos com atenção total à limpeza antes e depois de cada serviço.</p>
-                </div>
-                <div class="diff-card reveal">
-                    <div class="diff-icon"><i class="bi bi-shield-check"></i></div>
-                    <h3>Serviço Garantido</h3>
-                    <p>Garantia em todas as peças e serviços. Seu conforto é nossa responsabilidade.</p>
-                </div>
+                <div class="diff-card reveal"><div class="diff-icon"><i class="bi bi-person-badge"></i></div><h3>Especialistas</h3><p>Técnicos certificados com anos de experiência nas principais marcas do mercado.</p></div>
+                <div class="diff-card reveal"><div class="diff-icon"><i class="bi bi-lightning-charge"></i></div><h3>Agilidade</h3><p>Resolvemos o seu problema com rapidez para não deixar você no calor esperando.</p></div>
+                <div class="diff-card reveal"><div class="diff-icon"><i class="bi bi-droplet-half"></i></div><h3>Limpeza Absoluta</h3><p>Trabalhamos com atenção total à limpeza antes e depois de cada serviço.</p></div>
+                <div class="diff-card reveal"><div class="diff-icon"><i class="bi bi-shield-check"></i></div><h3>Serviço Garantido</h3><p>Garantia em todas as peças e serviços. Seu conforto é nossa responsabilidade.</p></div>
             </div>
         </div>
     </section>
@@ -814,99 +554,36 @@
                 <div class="heading-line" style="margin:0 auto;"></div>
             </div>
             <div class="steps-row">
-                <div class="step reveal">
-                    <div class="step-num"><i class="bi bi-chat-dots"></i></div>
-                    <h3>Passo 01<br>Orçamento</h3>
-                    <p>Envie uma mensagem no WhatsApp descrevendo seu problema ou necessidade.</p>
-                </div>
-                <div class="step reveal">
-                    <div class="step-num"><i class="bi bi-calendar-check"></i></div>
-                    <h3>Passo 02<br>Agendamento</h3>
-                    <p>Escolhemos juntos o melhor horário para sua visita técnica.</p>
-                </div>
-                <div class="step reveal">
-                    <div class="step-num"><i class="bi bi-tools"></i></div>
-                    <h3>Passo 03<br>Execução</h3>
-                    <p>Nossa equipe realiza o serviço com qualidade, agilidade e garantia.</p>
-                </div>
+                <div class="step reveal"><div class="step-num"><i class="bi bi-chat-dots"></i></div><h3>Passo 01<br>Orçamento</h3><p>Envie uma mensagem no WhatsApp descrevendo seu problema ou necessidade.</p></div>
+                <div class="step reveal"><div class="step-num"><i class="bi bi-calendar-check"></i></div><h3>Passo 02<br>Agendamento</h3><p>Escolhemos juntos o melhor horário para sua visita técnica.</p></div>
+                <div class="step reveal"><div class="step-num"><i class="bi bi-tools"></i></div><h3>Passo 03<br>Execução</h3><p>Nossa equipe realiza o serviço com qualidade, agilidade e garantia.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- DEPOIMENTOS -->
     <section class="section section-alt" id="avaliacoes">
         <div class="container">
             <div class="reveal" style="text-align:center; margin-bottom:40px;">
                 <span class="label-tag">Confiança</span>
                 <h2 class="section-heading">O que dizem nossos <span>Clientes</span></h2>
                 <div class="heading-line" style="margin:0 auto 24px;"></div>
-                <!-- Badge Google -->
                 <div class="google-badge reveal">
                     <span class="g-logo">G</span>
-                    <div>
-                        <div class="g-rating">4,9 <span class="g-stars">★★★★★</span></div>
-                        <div class="g-count">Baseado em 13 avaliações no Google</div>
-                    </div>
-                    <a href="https://share.google/PkBxqPMHrRDaCe8Bo" target="_blank"
-                       style="color:var(--blue); font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.85rem; letter-spacing:0.05em; text-decoration:none; text-transform:uppercase;">
-                       Ver avaliações →
-                    </a>
+                    <div><div class="g-rating">4,9 <span class="g-stars">★★★★★</span></div><div class="g-count">Baseado em 13 avaliações no Google</div></div>
+                    <a href="https://share.google/PkBxqPMHrRDaCe8Bo" target="_blank" style="color:var(--blue); font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.85rem; letter-spacing:0.05em; text-decoration:none; text-transform:uppercase;">Ver avaliações →</a>
                 </div>
             </div>
             <div class="reviews-grid">
-                <div class="review-card reveal">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Excelente empresa. Instalaram um trabalho impecável e super profissional. Foram os únicos que se dispuseram a buscar a melhor alternativa para instalação do nosso ar, ficaram um excelente trabalho."</p>
-                    <div class="review-author">
-                        <div class="review-avatar" style="background:linear-gradient(135deg,#1565C0,#00B4D8);">P</div>
-                        <div><strong>Priscila Justo</strong><span>Sorocaba, SP · Local Guide</span></div>
-                    </div>
-                </div>
-                <div class="review-card reveal">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Solicitei a instalação de dois aparelhos Samsung, após várias tentativas dos aparelhos não instalarem, o Luiz e o L realizaram um excelente trabalho, realmente profissional, muito educados e competentes."</p>
-                    <div class="review-author">
-                        <div class="review-avatar" style="background:linear-gradient(135deg,#7C3AED,#A78BFA);">J</div>
-                        <div><strong>Jamille Nishi</strong><span>Sorocaba, SP</span></div>
-                    </div>
-                </div>
-                <div class="review-card reveal">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Profissional ético e dedicado. Após inúmeras tentativas de solução de vazamento do meu aparelho, foi o único que conseguiu resolver."</p>
-                    <div class="review-author">
-                        <div class="review-avatar" style="background:linear-gradient(135deg,#059669,#34D399);">G</div>
-                        <div><strong>Geisa Correa</strong><span>Sorocaba, SP</span></div>
-                    </div>
-                </div>
-                <div class="review-card reveal">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Profissionais muito preparados, com grande conhecimento na instalação e reparos de problemas, super recomendo!"</p>
-                    <div class="review-author">
-                        <div class="review-avatar" style="background:linear-gradient(135deg,#DC2626,#F87171);">R</div>
-                        <div><strong>Roberto Silva</strong><span>Sorocaba, SP</span></div>
-                    </div>
-                </div>
-                <div class="review-card reveal">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"Excelente profissional, me respondeu no whatsapp em poucos minutos. Foi uma chamada de vídeo e me ajudou muito. Super recomendo!"</p>
-                    <div class="review-author">
-                        <div class="review-avatar" style="background:linear-gradient(135deg,#D97706,#FCD34D);">F</div>
-                        <div><strong>Felipe Carneiro</strong><span>Sorocaba, SP</span></div>
-                    </div>
-                </div>
-                <div class="review-card reveal">
-                    <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"A empresa prestou serviços no nosso equipamento de Ar Condicionado. Ficaram excelentes. Empresa muito competente!"</p>
-                    <div class="review-author">
-                        <div class="review-avatar" style="background:linear-gradient(135deg,#0891B2,#67E8F9);">R</div>
-                        <div><strong>Rainer Krause</strong><span>Sorocaba, SP</span></div>
-                    </div>
-                </div>
+                <div class="review-card reveal"><div class="review-stars">★★★★★</div><p class="review-text">"Excelente empresa. Instalaram um trabalho impecável e super profissional. Foram os únicos que se dispuseram a buscar a melhor alternativa para instalação do nosso ar, ficaram um excelente trabalho."</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#1565C0,#00B4D8);">P</div><div><strong>Priscila Justo</strong><span>Sorocaba, SP · Local Guide</span></div></div></div>
+                <div class="review-card reveal"><div class="review-stars">★★★★★</div><p class="review-text">"Solicitei a instalação de dois aparelhos Samsung, após várias tentativas dos aparelhos não instalarem, o Luiz e o L realizaram um excelente trabalho, realmente profissional, muito educados e competentes."</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#7C3AED,#A78BFA);">J</div><div><strong>Jamille Nishi</strong><span>Sorocaba, SP</span></div></div></div>
+                <div class="review-card reveal"><div class="review-stars">★★★★★</div><p class="review-text">"Profissional ético e dedicado. Após inúmeras tentativas de solução de vazamento do meu aparelho, foi o único que conseguiu resolver."</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#059669,#34D399);">G</div><div><strong>Geisa Correa</strong><span>Sorocaba, SP</span></div></div></div>
+                <div class="review-card reveal"><div class="review-stars">★★★★★</div><p class="review-text">"Profissionais muito preparados, com grande conhecimento na instalação e reparos de problemas, super recomendo!"</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#DC2626,#F87171);">R</div><div><strong>Roberto Silva</strong><span>Sorocaba, SP</span></div></div></div>
+                <div class="review-card reveal"><div class="review-stars">★★★★★</div><p class="review-text">"Excelente profissional, me respondeu no whatsapp em poucos minutos. Foi uma chamada de vídeo e me ajudou muito. Super recomendo!"</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#D97706,#FCD34D);">F</div><div><strong>Felipe Carneiro</strong><span>Sorocaba, SP</span></div></div></div>
+                <div class="review-card reveal"><div class="review-stars">★★★★★</div><p class="review-text">"A empresa prestou serviços no nosso equipamento de Ar Condicionado. Ficaram excelentes. Empresa muito competente!"</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#0891B2,#67E8F9);">R</div><div><strong>Rainer Krause</strong><span>Sorocaba, SP</span></div></div></div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
     <section class="section" id="faq">
         <div class="container">
             <div class="reveal" style="text-align:center; margin-bottom:50px;">
@@ -915,74 +592,23 @@
                 <div class="heading-line" style="margin:0 auto;"></div>
             </div>
             <div class="faq-list reveal">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Quanto tempo demora uma instalação padrão?</span>
-                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Uma instalação padrão de split residencial leva em média 2 a 4 horas, dependendo da complexidade da infraestrutura e do acesso ao local.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Com que frequência devo higienizar o ar condicionado?</span>
-                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Recomendamos higienização a cada 6 meses para uso residencial e a cada 3 meses para ambientes comerciais ou com uso intenso. Aparelhos sujos consomem até 30% mais energia.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Vocês dão garantia nos serviços?</span>
-                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sim! Todos os nossos serviços possuem garantia. Trabalhamos com peças de qualidade e responsabilidade técnica em cada atendimento.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Vocês atendem empresas e comércios?</span>
-                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sim, atendemos residências, comércios, escritórios e indústrias. Temos experiência com instalações de múltiplos aparelhos e sistemas de climatização corporativa.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Quais cidades vocês atendem?</span>
-                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Atendemos Sorocaba e toda a região, incluindo Votorantim, Araçoiaba da Serra, Iperó, Itu, Boituva, Porto Feliz e Salto de Pirapora.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Vocês trabalham com todas as marcas?</span>
-                        <div class="faq-icon"><i class="bi bi-plus"></i></div>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sim! Atendemos todas as marcas do mercado: LG, Samsung, Midea, Daikin, Fujitsu, TCL, Gree, Elgin, Springer, Hitachi, Carrier e muitas outras.</p>
-                    </div>
-                </div>
+                <div class="faq-item"><button class="faq-question"><span>Quanto tempo demora uma instalação padrão?</span><div class="faq-icon"><i class="bi bi-plus"></i></div></button><div class="faq-answer"><p>Uma instalação padrão de split residencial leva em média 2 a 4 horas, dependendo da complexidade da infraestrutura e do acesso ao local.</p></div></div>
+                <div class="faq-item"><button class="faq-question"><span>Com que frequência devo higienizar o ar condicionado?</span><div class="faq-icon"><i class="bi bi-plus"></i></div></button><div class="faq-answer"><p>Recomendamos higienização a cada 6 meses para uso residencial e a cada 3 meses para ambientes comerciais ou com uso intenso. Aparelhos sujos consomem até 30% mais energia.</p></div></div>
+                <div class="faq-item"><button class="faq-question"><span>Vocês dão garantia nos serviços?</span><div class="faq-icon"><i class="bi bi-plus"></i></div></button><div class="faq-answer"><p>Sim! Todos os nossos serviços possuem garantia. Trabalhamos com peças de qualidade e responsabilidade técnica em cada atendimento.</p></div></div>
+                <div class="faq-item"><button class="faq-question"><span>Vocês atendem empresas e comércios?</span><div class="faq-icon"><i class="bi bi-plus"></i></div></button><div class="faq-answer"><p>Sim, atendemos residências, comércios, escritórios e indústrias. Temos experiência com instalações de múltiplos aparelhos e sistemas de climatização corporativa.</p></div></div>
+                <div class="faq-item"><button class="faq-question"><span>Quais cidades vocês atendem?</span><div class="faq-icon"><i class="bi bi-plus"></i></div></button><div class="faq-answer"><p>Atendemos Sorocaba e toda a região, incluindo Votorantim, Araçoiaba da Serra, Iperó, Itu, Boituva, Porto Feliz e Salto de Pirapora.</p></div></div>
+                <div class="faq-item"><button class="faq-question"><span>Vocês trabalham com todas as marcas?</span><div class="faq-icon"><i class="bi bi-plus"></i></div></button><div class="faq-answer"><p>Sim! Atendemos todas as marcas do mercado: LG, Samsung, Midea, Daikin, Fujitsu, TCL, Gree, Elgin, Springer, Hitachi, Carrier e muitas outras.</p></div></div>
             </div>
         </div>
     </section>
 
-    <!-- REGIÕES DE ATENDIMENTO -->
     <div class="regions-section">
         <div class="container">
             <div class="reveal" style="text-align:center;">
                 <span class="label-tag" style="color:var(--cyan);">Onde atuamos</span>
                 <h2 class="section-heading" style="color:var(--white);">Regiões de <span>Atendimento</span></h2>
                 <div class="heading-line" style="margin:0 auto;"></div>
-                <p style="color:var(--gray); margin-top:12px; font-size:0.95rem;">
-                    Instalação e manutenção de ar condicionado em Sorocaba e toda a região metropolitana.
-                </p>
+                <p style="color:var(--gray); margin-top:12px; font-size:0.95rem;">Instalação e manutenção de ar condicionado em Sorocaba e toda a região metropolitana.</p>
             </div>
             <div class="regions-grid reveal">
                 <div class="region-item"><i class="bi bi-geo-alt-fill"></i><span>Sorocaba</span></div>
@@ -1009,22 +635,10 @@
                     <h2 class="section-heading">Vamos agendar<br>sua <span>visita?</span></h2>
                     <div class="heading-line"></div>
                     <div class="contact-items">
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-whatsapp"></i></div>
-                            <div><strong>WhatsApp / Telefone</strong><span>(15) 99800-0463 / (15) 99111-3066</span></div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-envelope"></i></div>
-                            <div><strong>E-mail</strong><span>llarcondicionados@hotmail.com</span></div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-instagram"></i></div>
-                            <div><strong>Instagram</strong><span>@llarcondicionados</span></div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-item-icon"><i class="bi bi-geo-alt"></i></div>
-                            <div><strong>Endereço Base</strong><span>Rua Alcides Soares, 129 — Jd. Pacaembu, Sorocaba/SP</span></div>
-                        </div>
+                        <div class="contact-item"><div class="contact-item-icon"><i class="bi bi-whatsapp"></i></div><div><strong>WhatsApp / Telefone</strong><span>(15) 99800-0463 / (15) 99111-3066</span></div></div>
+                        <div class="contact-item"><div class="contact-item-icon"><i class="bi bi-envelope"></i></div><div><strong>E-mail</strong><span>llarcondicionados@hotmail.com</span></div></div>
+                        <div class="contact-item"><div class="contact-item-icon"><i class="bi bi-instagram"></i></div><div><strong>Instagram</strong><span>@llarcondicionados</span></div></div>
+                        <div class="contact-item"><div class="contact-item-icon"><i class="bi bi-geo-alt"></i></div><div><strong>Endereço Base</strong><span>Rua Alcides Soares, 129 — Jd. Pacaembu, Sorocaba/SP</span></div></div>
                     </div>
                 </div>
                 <div class="reveal">
@@ -1093,18 +707,10 @@
         for (let i = 0; i < 25; i++) {
             const p = document.createElement('div');
             p.className = 'particle';
-            p.style.cssText = `
-                left: ${Math.random() * 100}%;
-                bottom: ${Math.random() * 40}%;
-                --dur: ${3 + Math.random() * 5}s;
-                --delay: ${Math.random() * 5}s;
-                width: ${2 + Math.random() * 4}px;
-                height: ${2 + Math.random() * 4}px;
-            `;
+            p.style.cssText = `left:${Math.random()*100}%;bottom:${Math.random()*40}%;--dur:${3+Math.random()*5}s;--delay:${Math.random()*5}s;width:${2+Math.random()*4}px;height:${2+Math.random()*4}px;`;
             particlesContainer.appendChild(p);
         }
 
-        // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(btn => {
             btn.addEventListener('click', () => {
                 const item = btn.parentElement;
@@ -1117,9 +723,7 @@
         const reveals = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
-                }
+                if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), i * 80);
             });
         }, { threshold: 0.1 });
         reveals.forEach(el => observer.observe(el));
