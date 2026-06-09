@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -108,12 +109,16 @@
             height: 90px; width: 90px;
             object-fit: cover;
             border-radius: 50%;
-            border: 2px solid rgba(0,180,216,0.5);
-            box-shadow: 0 0 20px rgba(0,180,216,0.25), 0 4px 12px rgba(0,0,0,0.3);
-            background: var(--navy);
+            border: 3px solid transparent;
+            background: linear-gradient(var(--navy), var(--navy)) padding-box,
+                        linear-gradient(135deg, var(--cyan), var(--blue)) border-box;
+            box-shadow: 0 0 18px rgba(0,180,216,0.2), 0 4px 12px rgba(0,0,0,0.4);
             transition: box-shadow 0.3s, transform 0.3s;
         }
-        .logo img:hover { box-shadow: 0 0 30px rgba(0,180,216,0.5), 0 4px 20px rgba(0,0,0,0.4); transform: scale(1.05); }
+        .logo img:hover {
+            box-shadow: 0 0 28px rgba(0,180,216,0.45), 0 4px 20px rgba(0,0,0,0.5);
+            transform: scale(1.05);
+        }
 
         .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
         .nav-links a { color: rgba(255,255,255,0.85); font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; transition: color 0.3s; position: relative; }
@@ -1035,7 +1040,7 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="./lel-arcondicionado.png" alt="L&L" style="height:80px; width:80px; object-fit:cover; border-radius:50%; border:2px solid rgba(0,180,216,0.4); margin-bottom:12px;">
+                    <img src="./lel-arcondicionado.png" alt="L&L" style="height:80px; width:80px; object-fit:cover; border-radius:50%; border:3px solid transparent; background: linear-gradient(#060D14, #060D14) padding-box, linear-gradient(135deg, #00B4D8, #1565C0) border-box; margin-bottom:12px;">
                     <p>Garantindo o conforto térmico da sua família e empresa com segurança, transparência e qualidade.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/llarcondicionados/" target="_blank"><i class="bi bi-instagram"></i></a>
