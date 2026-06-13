@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -101,64 +102,17 @@
         h1, h2, h3, h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.02em; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-        /* ─── HEADER ─── */
         header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: all 0.4s ease; }
         header.scrolled { background: rgba(13,27,42,0.97); backdrop-filter: blur(12px); box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; max-width: 1200px; margin: 0 auto; }
 
-        /* ✅ LOGO COM NOME AO LADO */
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-        }
-
-        .logo img {
-            height: 80px;
-            width: 80px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid transparent;
-            background: linear-gradient(var(--navy), var(--navy)) padding-box,
-                        linear-gradient(135deg, var(--cyan), var(--blue)) border-box;
-            box-shadow: 0 0 18px rgba(0,180,216,0.2), 0 4px 12px rgba(0,0,0,0.4);
-            transition: box-shadow 0.3s, transform 0.3s;
-            flex-shrink: 0;
-        }
-
-        .logo img:hover {
-            box-shadow: 0 0 28px rgba(0,180,216,0.45), 0 4px 20px rgba(0,0,0,0.5);
-            transform: scale(1.05);
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.1;
-        }
-
-        .logo-text .logo-name {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 900;
-            font-size: 1.6rem;
-            color: var(--white);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .logo-text .logo-name span {
-            color: var(--cyan);
-        }
-
-        .logo-text .logo-sub {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 400;
-            font-size: 0.78rem;
-            color: var(--silver);
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
+        .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+        .logo img { height: 80px; width: 80px; object-fit: cover; border-radius: 50%; border: 3px solid transparent; background: linear-gradient(var(--navy), var(--navy)) padding-box, linear-gradient(135deg, var(--cyan), var(--blue)) border-box; box-shadow: 0 0 18px rgba(0,180,216,0.2), 0 4px 12px rgba(0,0,0,0.4); transition: box-shadow 0.3s, transform 0.3s; flex-shrink: 0; }
+        .logo img:hover { box-shadow: 0 0 28px rgba(0,180,216,0.45), 0 4px 20px rgba(0,0,0,0.5); transform: scale(1.05); }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text .logo-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.6rem; color: var(--white); text-transform: uppercase; letter-spacing: 0.05em; }
+        .logo-text .logo-name span { color: var(--cyan); }
+        .logo-text .logo-sub { font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 0.78rem; color: var(--silver); letter-spacing: 0.2em; text-transform: uppercase; }
 
         .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
         .nav-links a { color: rgba(255,255,255,0.85); font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; transition: color 0.3s; position: relative; }
@@ -170,7 +124,6 @@
         .btn-nav::after { display: none !important; }
         .mobile-btn { display: none; cursor: pointer; color: white; font-size: 1.8rem; }
 
-        /* ─── HERO ─── */
         .hero { position: relative; height: 100vh; min-height: 650px; display: flex; align-items: center; overflow: hidden; }
         .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
         .hero-bg-fallback { position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(21,101,192,0.35) 0%, transparent 60%), radial-gradient(ellipse at 80% 30%, rgba(0,180,216,0.2) 0%, transparent 50%), var(--navy); z-index: 0; }
@@ -197,7 +150,6 @@
         .scroll-hint i { font-size: 1.2rem; }
         @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
 
-        /* ─── STATS BAR ─── */
         .stats-bar { background: var(--navy); border-bottom: 3px solid var(--cyan); }
         .stats-inner { display: flex; justify-content: space-around; align-items: center; padding: 28px 24px; gap: 20px; flex-wrap: wrap; }
         .stat-item { text-align: center; color: var(--white); }
@@ -205,7 +157,6 @@
         .stat-label { font-size: 0.8rem; color: var(--silver); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; display: block; }
         .stat-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.1); }
 
-        /* ─── SEÇÕES GERAIS ─── */
         .section { padding: 100px 0; }
         .section-alt { background: var(--white); }
         .label-tag { display: inline-block; color: var(--cyan); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
@@ -214,7 +165,6 @@
         .section-heading span { color: var(--cyan); }
         .heading-line { width: 50px; height: 4px; background: linear-gradient(90deg, var(--cyan), var(--blue)); border-radius: 2px; margin-bottom: 20px; }
 
-        /* ─── SERVIÇOS ─── */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
         .service-card { background: var(--white); border-radius: 8px; padding: 36px 28px; border: 1px solid #E2EAF4; transition: all 0.35s ease; position: relative; overflow: hidden; }
         .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0; background: linear-gradient(180deg, var(--cyan), var(--blue)); transition: height 0.35s ease; border-radius: 0 0 4px 0; }
@@ -227,7 +177,6 @@
         .service-cta { display: inline-flex; align-items: center; gap: 6px; color: var(--blue); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
         .service-cta:hover { color: var(--cyan); gap: 10px; }
 
-        /* ─── MARCAS ─── */
         .brands-section { background: var(--navy); padding: 40px 0; overflow: hidden; }
         .brands-label { text-align: center; color: var(--gray); font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px; }
         .brands-track-wrap { overflow: hidden; }
@@ -236,15 +185,19 @@
         .brands-track span:hover { color: var(--cyan); }
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* ─── CTA BANNER ─── */
         .cta-section { background: linear-gradient(135deg, var(--blue) 0%, #0D47A1 100%); padding: 80px 0; position: relative; overflow: hidden; }
         .cta-section::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 40px 40px; }
         .cta-inner { position: relative; text-align: center; }
         .cta-section h2 { color: var(--white); font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 16px; }
         .cta-section p { color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 550px; margin: 0 auto 36px; }
 
-        /* ─── PORTFÓLIO ─── */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+        /* ─── PORTFÓLIO — grade adaptativa ─── */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
         .portfolio-item { position: relative; border-radius: 10px; overflow: hidden; background: var(--navy); aspect-ratio: 9/16; cursor: pointer; }
         .portfolio-item video, .portfolio-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease, filter 0.5s ease; }
         .portfolio-item:hover video, .portfolio-item:hover img { transform: scale(1.05); filter: brightness(0.55); }
@@ -255,7 +208,6 @@
         .portfolio-overlay span { color: var(--silver); font-size: 0.78rem; }
         .portfolio-item:has(video)::after { content: '\F50E'; font-family: 'bootstrap-icons'; position: absolute; top: 12px; right: 12px; width: 30px; height: 30px; background: rgba(0,180,216,0.85); color: white; border-radius: 50%; font-size: 0.85rem; line-height: 30px; text-align: center; opacity: 0.9; }
 
-        /* ─── DEPOIMENTOS ─── */
         .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
         .review-card { background: var(--white); border-radius: 12px; padding: 28px; border: 1px solid #E2EAF4; transition: all 0.3s; }
         .review-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(21,101,192,0.1); }
@@ -271,7 +223,6 @@
         .google-badge .g-stars { color: #F59E0B; font-size: 0.85rem; }
         .google-badge .g-count { color: var(--gray); font-size: 0.8rem; }
 
-        /* ─── FAQ ─── */
         .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
         .faq-item { background: var(--white); border-radius: 8px; border: 1px solid #E2EAF4; overflow: hidden; transition: box-shadow 0.3s; }
         .faq-item:hover { box-shadow: 0 8px 24px rgba(21,101,192,0.08); }
@@ -283,7 +234,6 @@
         .faq-answer p { padding: 16px 24px 20px; color: var(--gray); font-size: 0.95rem; line-height: 1.7; border-top: 1px solid #F0F4F8; }
         .faq-item.open .faq-answer { max-height: 200px; }
 
-        /* ─── REGIÕES ─── */
         .regions-section { background: var(--navy); padding: 80px 0; }
         .regions-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-top: 40px; }
         .region-item { background: rgba(255,255,255,0.05); border: 1px solid rgba(0,180,216,0.15); border-radius: 8px; padding: 16px 20px; display: flex; align-items: center; gap: 10px; transition: all 0.3s; }
@@ -291,7 +241,6 @@
         .region-item i { color: var(--cyan); font-size: 0.9rem; flex-shrink: 0; }
         .region-item span { color: var(--silver); font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.05em; }
 
-        /* ─── DIFERENCIAIS ─── */
         .diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
         .diff-card { text-align: center; padding: 40px 24px; background: var(--white); border-radius: 8px; border-bottom: 4px solid transparent; transition: all 0.3s; }
         .diff-card:hover { border-color: var(--cyan); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
@@ -300,7 +249,6 @@
         .diff-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
         .diff-card p { color: var(--gray); font-size: 0.9rem; line-height: 1.6; font-family: 'Barlow Condensed', sans-serif; font-weight: 400; }
 
-        /* ─── COMO FUNCIONA ─── */
         .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; position: relative; }
         .steps-row::before { content: ''; position: absolute; top: 40px; left: 16.66%; right: 16.66%; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--blue), var(--cyan)); z-index: 0; }
         .step { text-align: center; position: relative; z-index: 1; }
@@ -308,7 +256,6 @@
         .step h3 { font-size: 1.3rem; margin-bottom: 10px; }
         .step p { color: var(--gray); font-size: 0.9rem; }
 
-        /* ─── CONTATO ─── */
         .contact-section { background: var(--navy); padding: 100px 0; }
         .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
         .contact-wrap .label-tag { color: var(--cyan); }
@@ -323,7 +270,6 @@
         .map-wrap { border-radius: 12px; overflow: hidden; height: 420px; border: 2px solid rgba(0,180,216,0.2); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
         .map-wrap iframe { width: 100%; height: 100%; border: 0; }
 
-        /* ─── FOOTER ─── */
         footer { background: #060D14; padding: 60px 0 30px; border-top: 1px solid rgba(255,255,255,0.06); }
         .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
         .footer-brand p { color: var(--gray); font-size: 0.9rem; line-height: 1.7; margin: 16px 0 24px; max-width: 280px; }
@@ -339,22 +285,19 @@
         .footer-bottom p { color: var(--gray); font-size: 0.85rem; }
         .footer-bottom strong { color: var(--cyan); }
 
-        /* ─── WHATSAPP FLOAT ─── */
         .wa-float { position: fixed; bottom: 30px; right: 30px; width: 65px; height: 65px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.2rem; text-decoration: none; box-shadow: 0 8px 25px rgba(37,211,102,0.4); z-index: 999; transition: all 0.3s; animation: waPulse 2.5s ease infinite; }
         .wa-float:hover { transform: scale(1.1) translateY(-4px); box-shadow: 0 16px 35px rgba(37,211,102,0.5); }
         @keyframes waPulse { 0%, 100% { box-shadow: 0 8px 25px rgba(37,211,102,0.4); } 50% { box-shadow: 0 8px 25px rgba(37,211,102,0.4), 0 0 0 12px rgba(37,211,102,0.12); } }
 
-        /* ─── ANIMAÇÕES ─── */
         @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
         .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
-        /* ─── RESPONSIVE ─── */
         @media (max-width: 992px) {
             .contact-wrap { grid-template-columns: 1fr; }
             .map-wrap { height: 300px; }
             .footer-top { grid-template-columns: 1fr 1fr; }
-            .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+            .portfolio-grid { grid-template-columns: repeat(4, 1fr); }
             .steps-row { grid-template-columns: 1fr; gap: 24px; }
             .steps-row::before { display: none; }
         }
@@ -369,7 +312,6 @@
             .footer-top { grid-template-columns: 1fr; }
             .footer-bottom { flex-direction: column; text-align: center; }
             .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-            /* Nome do logo some no mobile para não atrapalhar */
             .logo-text .logo-sub { display: none; }
             .logo-text .logo-name { font-size: 1.2rem; }
             .logo img { height: 60px; width: 60px; }
@@ -380,7 +322,6 @@
 
     <header id="site-header">
         <div class="nav-inner">
-            <!-- ✅ LOGO COM NOME AO LADO -->
             <a href="#" class="logo">
                 <img src="./lel-arcondicionado.png" alt="L&L Ar Condicionado">
                 <div class="logo-text">
@@ -424,10 +365,7 @@
                 </a>
             </div>
         </div>
-        <div class="scroll-hint">
-            <span>Role para ver</span>
-            <i class="bi bi-chevron-down"></i>
-        </div>
+        <div class="scroll-hint"><span>Role para ver</span><i class="bi bi-chevron-down"></i></div>
     </section>
 
     <div class="stats-bar">
@@ -474,7 +412,7 @@
                 <div class="service-card reveal">
                     <span class="service-num">04</span>
                     <div class="service-icon-wrap"><i class="bi bi-house-gear"></i></div>
-                    <h3>Infraestrutura para instalação padrão </h3>
+                    <h3>Infraestrutura para instalação padrão</h3>
                     <p>Passagem de infraestrutura completa durante a construção ou reforma do seu imóvel.</p>
                     <a href="https://wa.me/5515998000463?text=Olá,%20preciso%20de%20INFRAESTRUTURA" class="service-cta" target="_blank">Solicitar <i class="bi bi-arrow-right"></i></a>
                 </div>
@@ -516,11 +454,13 @@
                     Veja na prática a qualidade dos nossos serviços — instalações, higienizações e infraestruturas executadas pela nossa equipe.
                 </p>
             </div>
+            <!-- ✅ Grade com projeto8 adicionado — 8 itens em 4 colunas -->
             <div class="portfolio-grid reveal">
                 <div class="portfolio-item"><video autoplay muted loop playsinline><source src="./projeto1.mp4" type="video/mp4"></video><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span><h4>Instalação Residencial</h4><span>Split LG · Sorocaba/SP</span></div></div>
                 <div class="portfolio-item"><video autoplay muted loop playsinline><source src="./projeto2.mp4" type="video/mp4"></video><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span><h4>Higienização Completa</h4><span>Limpeza profunda</span></div></div>
                 <div class="portfolio-item"><video autoplay muted loop playsinline><source src="./projeto3.mp4" type="video/mp4"></video><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span><h4>Manutenção Corretiva</h4><span>Diagnóstico e reparo</span></div></div>
-                <div class="portfolio-item"><video autoplay muted loop playsinline><source src="./projeto4.mp4" type="video/mp4"></video><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span><h4>Pré-Instalação em Obra</h4><span>Infraestrutura elétrica</span></div></div>
+                <div class="portfolio-item"><video autoplay muted loop playsinline><source src="./projeto4.mp4" type="video/mp4"></video><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span><h4>Infraestrutura em Obra</h4><span>Infraestrutura elétrica</span></div></div>
+                <div class="portfolio-item"><video autoplay muted loop playsinline><source src="./projeto8.mp4" type="video/mp4"></video><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-camera-video-fill"></i> Vídeo</span><h4>Serviço Especializado</h4><span>L&L Ar Condicionado</span></div></div>
                 <div class="portfolio-item"><img src="./projeto5.png" alt="Condensadoras LG" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span><h4>Instalação Padrão</h4><span>Condensadoras LG Dual Inverter</span></div></div>
                 <div class="portfolio-item"><img src="./projeto6.png" alt="Split premium" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span><h4>Acabamento Impecável</h4><span>Split Black instalado</span></div></div>
                 <div class="portfolio-item"><img src="./projeto7.png" alt="Infraestrutura" loading="lazy"><div class="portfolio-overlay"><span class="portfolio-tag"><i class="bi bi-image-fill"></i> Foto</span><h4>Infraestrutura Vertical</h4><span>Instalação em apartamento</span></div></div>
