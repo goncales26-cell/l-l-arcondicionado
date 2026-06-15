@@ -312,17 +312,10 @@
             .footer-top { grid-template-columns: 1fr; }
             .footer-bottom { flex-direction: column; text-align: center; }
             .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-            .logo-text .logo-sub { display: none; }
-            .logo-text .logo-name { font-size: 1rem; letter-spacing: 0.02em; }
-            .logo img { height: 46px; width: 46px; }
-            .nav-inner { padding: 10px 16px; gap: 8px; }
-            .logo { gap: 8px; }
-        }
-
-        @media (max-width: 400px) {
-            .logo-text .logo-name { font-size: 0.85rem; }
-            .logo-text .logo-name span { display: block; }
-            .logo img { height: 38px; width: 38px; }
+            /* Mobile: esconde todo o texto do logo, mantém só o ícone circular */
+            .logo-text { display: none; }
+            .logo img { height: 44px; width: 44px; }
+            .nav-inner { padding: 10px 16px; }
         }
     </style>
 </head>
