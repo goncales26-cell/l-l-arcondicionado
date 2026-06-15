@@ -313,8 +313,16 @@
             .footer-bottom { flex-direction: column; text-align: center; }
             .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
             .logo-text .logo-sub { display: none; }
-            .logo-text .logo-name { font-size: 1.2rem; }
-            .logo img { height: 60px; width: 60px; }
+            .logo-text .logo-name { font-size: 1rem; letter-spacing: 0.02em; }
+            .logo img { height: 46px; width: 46px; }
+            .nav-inner { padding: 10px 16px; gap: 8px; }
+            .logo { gap: 8px; }
+        }
+
+        @media (max-width: 400px) {
+            .logo-text .logo-name { font-size: 0.85rem; }
+            .logo-text .logo-name span { display: block; }
+            .logo img { height: 38px; width: 38px; }
         }
     </style>
 </head>
@@ -352,7 +360,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-particles" id="particles"></div>
         <div class="hero-content container">
-            <div class="hero-eyebrow">Instalação e Manutenção</div>
+            <div class="hero-eyebrow">Instalação & Manutenção</div>
             <h1>Soluções Completas<br>em <span class="highlight">Ar Condicionado</span></h1>
             <p class="hero-city">Sorocaba · SP</p>
             <p class="hero-desc">Equipe técnica especializada para garantir o clima perfeito na sua casa ou empresa. Atendimento ágil, transparência total e serviço garantido.</p>
