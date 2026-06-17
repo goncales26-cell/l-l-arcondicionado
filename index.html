@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,8 +16,9 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
     <meta name="referrer" content="no-referrer">
+    <meta name="format-detection" content="telephone=no">
 
     <title>L&L Ar Condicionado | Assistência Técnica Especializada em Sorocaba</title>
     <meta name="description" content="Especialistas em instalação, manutenção preventiva e corretiva, e higienização de ar condicionado em Sorocaba. Atendimento rápido e equipe técnica qualificada.">
@@ -96,12 +98,12 @@
         }
 
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
-        body { background: var(--bg); color: var(--navy); font-family: 'DM Sans', sans-serif; overflow-x: hidden; max-width: 100vw; }
-        h1, h2, h3, h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.02em; overflow-wrap: break-word; word-break: break-word; }
-        p, span, a { overflow-wrap: break-word; }
+        html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+        body { background: var(--bg); color: var(--navy); font-family: 'DM Sans', sans-serif; overflow-x: hidden; max-width: 100vw; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        h1, h2, h3, h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; line-height: 1.15; text-transform: uppercase; letter-spacing: 0.02em; overflow-wrap: break-word; word-break: break-word; text-rendering: optimizeLegibility; }
+        p, span, a { overflow-wrap: break-word; word-wrap: break-word; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; width: 100%; }
-        img, video { max-width: 100%; }
+        img, video { max-width: 100%; height: auto; }
 
         header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: all 0.4s ease; }
         header.scrolled { background: rgba(13,27,42,0.97); backdrop-filter: blur(12px); box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
@@ -137,7 +139,7 @@
         .hero-content { position: relative; z-index: 4; width: 100%; text-align: center; padding-top: 80px; }
         .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; background: rgba(0,180,216,0.15); border: 1px solid rgba(0,180,216,0.3); color: var(--cyan); padding: 8px 20px; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px; animation: fadeDown 0.8s ease both; }
         .hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 20px; height: 1px; background: var(--cyan); }
-        .hero h1 { color: var(--white); font-size: clamp(2.2rem, 8vw, 6.5rem); margin-bottom: 12px; animation: fadeDown 0.8s ease 0.1s both; padding: 0 10px; }
+        .hero h1 { color: var(--white); font-size: clamp(2.2rem, 7.5vw, 5.5rem); margin-bottom: 12px; animation: fadeDown 0.8s ease 0.1s both; padding: 0 10px; }
         .hero h1 .highlight { color: var(--cyan); position: relative; display: inline-block; }
         .hero h1 .highlight::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--cyan), transparent); border-radius: 2px; }
         .hero-city { font-size: clamp(1.2rem, 4vw, 3rem); color: var(--silver); font-family: 'Barlow Condensed', sans-serif; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 30px; animation: fadeDown 0.8s ease 0.2s both; }
@@ -324,15 +326,24 @@
             .nav-brand-mobile { display: block; }
         }
 
-        /* Correção extra para telas muito estreitas (ex: Moto G22, 720px de largura lógica) */
+        /* Correção extra para telas muito estreitas (ex: Moto G22, 720px de largura lógica) e Instagram webview */
         @media (max-width: 400px) {
-            .hero h1 { font-size: 2rem; letter-spacing: 0.01em; }
-            .hero-city { letter-spacing: 0.12em; font-size: 1.1rem; }
-            .hero-eyebrow { font-size: 0.78rem; padding: 7px 14px; letter-spacing: 0.08em; }
-            .hero-desc { font-size: 1rem; }
-            .section-heading { font-size: 1.6rem; }
-            .container { padding: 0 16px; }
+            .hero h1 { font-size: 1.9rem; letter-spacing: 0em; line-height: 1.1; }
+            .hero-city { letter-spacing: 0.1em; font-size: 1rem; }
+            .hero-eyebrow { font-size: 0.72rem; padding: 6px 12px; letter-spacing: 0.05em; }
+            .hero-desc { font-size: 0.95rem; line-height: 1.5; }
+            .section-heading { font-size: 1.5rem; letter-spacing: 0.01em; }
+            .container { padding: 0 14px; }
             .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+            h1, h2, h3, h4 { letter-spacing: 0em; }
+        }
+
+        /* Instagram webview ultra-narrow fix */
+        @media (max-width: 320px) {
+            .hero h1 { font-size: 1.6rem; line-height: 1.05; margin-bottom: 8px; }
+            .hero-city { font-size: 0.9rem; }
+            .container { padding: 0 12px; }
+            h1, h2, h3 { letter-spacing: -0.01em; }
         }
     </style>
 </head>
